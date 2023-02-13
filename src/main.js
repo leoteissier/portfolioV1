@@ -34,5 +34,3 @@ function removeActiveA() {
         a.classList.remove("button-active");
     });
 }
-
-
