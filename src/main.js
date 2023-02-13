@@ -36,7 +36,7 @@ function removeActiveA() {
 }
 
 
-const linksAbout = document.querySelectorAll(".details .personal-info");
+const linksAbout = document.querySelectorAll("#about .details .flex-center span");
 linksAbout.forEach(a => {
     a.addEventListener("click", () => {
         removeActiveAbout();
