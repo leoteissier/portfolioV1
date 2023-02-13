@@ -3,6 +3,10 @@
 import Bio from "@/components/about/Bio.vue";
 import Interests from "@/components/about/Interests.vue";
 import Education from "@/components/about/Education.vue";
+
+
+
+
 export default {
   name: 'About',
   components: {
