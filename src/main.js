@@ -22,3 +22,17 @@ function removeActive() {
 }
 
 
+const linksA = document.querySelectorAll("a");
+linksA.forEach(a => {
+    a.addEventListener("click", () => {
+        removeActiveA();
+        a.classList.add("button-active");
+    });
+});
+function removeActiveA() {
+    linksA.forEach(a => {
+        a.classList.remove("button-active");
+    });
+}
+
+
