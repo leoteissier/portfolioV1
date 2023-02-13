@@ -13,6 +13,7 @@ export default {
   data() {
     return {
       choix: 'Bio',
+      isActive: 'Bio',
       composants: [
         'Bio',
         'Interests',
@@ -23,8 +24,9 @@ export default {
   computed: {
     selectComponent() {
       return this.composants[this.choix]
-    }
+    },
   }
+
 }
 </script>
 
@@ -38,18 +40,23 @@ export default {
         <div class="flex-center">
           <img class="petit-logo-arrow" src="../assets/arrow-right-s-line.svg" alt="logo arrow">
           <img class="logo" src="../assets/dossier-rose.png" alt="">
-          <div><span @click="choix='Bio'" class="text-18px color-white">bio</span></div>
+          <div class="text-18px">
+            <span v-bind:class="{ 'color-white': isActive === 'Bio' }" @click="choix='Bio'; isActive = 'Bio'">bio</span>
+          </div>
         </div>
         <div class="flex-center">
           <img class="petit-logo-arrow" src="../assets/arrow-right-s-line.svg" alt="logo arrow">
           <img class="logo" src="../assets/dossier-vert.png" alt="">
-<!--          <div @click="choix='interests'" class="text-18px personal-info">interests</div>-->
-          <div><span @click="choix='Interests'" class="text-18px">interests</span></div>
+          <div class="text-18px">
+            <span v-bind:class="{ 'color-white': isActive === 'Interests' }" @click="choix='Interests'; isActive = 'Interests'">interests</span>
+          </div>
         </div>
         <div class="flex-center">
           <img class="petit-logo-arrow" src="../assets/arrow-right-s-line.svg" alt="logo arrow">
           <img class="logo" src="../assets/dossier-bleu.png" alt="">
-          <div><span @click="choix='Education'" class="text-18px">eduacation</span></div>
+          <div class="text-18px">
+            <span v-bind:class="{ 'color-white': isActive === 'Education' }" @click="choix='Education'; isActive = 'Education'">education</span>
+          </div>
         </div>
       </div>
       <div class="border-left" id="description">

@@ -1,27 +1,38 @@
 <template>
   <div>
-    <p class="margin-10px">1</p>
-    <p class="margin-10px">2</p>
-    <p class="margin-10px">3</p>
-    <p class="margin-10px">4</p>
-    <p class="margin-10px">5</p>
-    <p class="margin-10px">6</p>
-    <p class="margin-10px">7</p>
-    <p class="margin-10px">8</p>
-    <p class="margin-10px">9</p>
-    <p class="margin-10px">10</p>
-  </div>
-  <div>
-    <p class="margin-10px">/*</p>
-    <p class="margin-10px">* About me</p>
-    <p class="margin-10px">* I have 5 years of еxperience in web</p>
-    <p class="margin-10px">* development lorem ipsum dolor sit amet, </p>
-    <p class="margin-10px">* consectetur adipiscing elit, sed do eiusmod</p>
-    <p class="margin-10px">* tempor incididunt ut labore et dolore</p>
-    <p class="margin-10px">* </p>
-    <p class="margin-10px">* </p>
-    <p class="margin-10px">* </p>
-    <p class="margin-10px">*/</p>
+    <div class="flex">
+      <p class="margin-right-20px">1</p><p>*/</p>
+    </div>
+    <div class="flex">
+      <p class="margin-right-20px">2</p><p>zqdzqdq</p>
+    </div>
+    <div class="flex">
+      <p class="margin-right-20px">3</p><p></p>
+    </div>
+    <div class="flex">
+      <p class="margin-right-20px">4</p><p></p>
+    </div>
+    <div class="flex">
+      <p class="margin-right-20px">5</p><p></p>
+    </div>
+    <div class="flex">
+      <p class="margin-right-20px">6</p><p></p>
+    </div>
+    <div class="flex">
+      <p class="margin-right-20px">7</p><p></p>
+    </div>
+    <div class="flex">
+      <p class="margin-right-20px">8</p><p></p>
+    </div>
+    <div>
+      <p class="margin-right-20px">9</p><p></p>
+    </div>
+    <div class="flex">
+      <p class="margin-right-20px">10</p><p></p>
+    </div>
+    <div class="flex">
+      <p class="margin-right-20px">11</p><p>*/</p>
+    </div>
   </div>
 </template>
 

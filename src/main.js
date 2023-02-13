@@ -22,7 +22,7 @@ function removeActive() {
 }
 
 
-const linksA = document.querySelectorAll("nav li a");
+const linksA = document.querySelectorAll("a");
 linksA.forEach(a => {
     a.addEventListener("click", () => {
         removeActiveA();
@@ -34,20 +34,3 @@ function removeActiveA() {
         a.classList.remove("button-active");
     });
 }
-
-
-const linksAbout = document.querySelectorAll("#about .details .flex-center span");
-linksAbout.forEach(a => {
-    a.addEventListener("click", () => {
-        removeActiveAbout();
-        a.classList.add("color-white");
-    });
-});
-function removeActiveAbout() {
-    linksAbout.forEach(a => {
-        a.classList.remove("color-white");
-    });
-}
-
-
-
