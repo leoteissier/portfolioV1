@@ -21,7 +21,6 @@ function removeActive() {
     });
 }
 
-
 const linksA = document.querySelectorAll("a");
 linksA.forEach(a => {
     a.addEventListener("click", () => {
