@@ -10,7 +10,7 @@ Je suis actuellement en deuxième année du BUT MMI (Métiers du Multimédia et 
 
 ## Technologies utilisées
 
-Ce portfolio a été créé avec Vue.js, une bibliothèque JavaScript progressive utilisée pour créer des interfaces utilisateur interactives et réactives. J'ai également utilisé Bootstrap pour la mise en page et la conception des composants.
+Ce portfolio a été créé avec Vue.js, une bibliothèque JavaScript progressive utilisée pour créer des interfaces utilisateur interactives et réactives. Vue.js est un framework JavaScript open source qui permet de créer des applications web monopages (SPA) et des applications mobiles natives.
 
 ## Fonctionnalités
 
