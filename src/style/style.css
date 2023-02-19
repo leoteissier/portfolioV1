@@ -513,6 +513,7 @@ header #nav-right {
   padding-left: 20px;
   border-left: solid #1E2D3D 1px;
 }
+
 footer {
   grid-column: 1;
   grid-row: 3/4;
@@ -996,7 +997,6 @@ footer .logo {
   flex-direction: 0;
   justify-content: 0;
   align-items: 0;
-  display: flex;
   overflow: hidden;
 }
 
