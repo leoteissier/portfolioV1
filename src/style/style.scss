@@ -21,9 +21,6 @@ body{
   padding: 5vh;
 }
 
-
-
-
 body::-webkit-scrollbar {
   display: none;
 }
@@ -607,9 +604,9 @@ footer{
     display: flex;
     overflow: hidden;
     .personal-info{
-      display: flex;
       width: calc(100% - 30px);
       @include padding(20px);
+      display: flex;
       overflow: hidden;
     }
   }
@@ -620,7 +617,6 @@ footer{
     overflow: hidden;
   }
 }
-
 
 
 //contact---------------------------------------------------
