@@ -429,7 +429,7 @@ a {
   width: 100%;
   height: 100%;
   background-color: #011627;
-  border: solid #1E2D3D 1px;
+  border: #1E2D3D solid 1px;
   border-radius: 8px;
   display: grid;
   grid-template-columns: 1fr;
