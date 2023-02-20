@@ -42,8 +42,6 @@
 </template>
 
 <script>
-import { db } from '/firebase.js';
-
 export default {
   name: "snippet",
   data() {
@@ -51,10 +49,6 @@ export default {
       starCount : 0,
       clicked: false,
     }
-  },
-  firebase: {
-    // lie le compteur à la référence 'compteur' dans la base de données
-    starCount: db.ref('starCount'),
   },
   computed:{
     starImage() {
@@ -75,23 +69,6 @@ export default {
         this.clicked = false;
       }
     },
-    addStar() {
-      // Ajouter une étoile à la base de données Firebase
-      const starRef = firebase.database().ref('stars')
-      starRef.transaction((count) => (count || 0) + 1)
-    },
-  },
-  mounted() {
-    // Initialiser votre connexion Firebase
-    firebase.initializeApp(this.firebaseConfig)
-
-    // Créer une référence à votre base de données Firebase
-    const starRef = firebase.database().ref('stars')
-
-    // Écouter les mises à jour en temps réel de la base de données
-    starRef.on('value', (snapshot) => {
-      this.starCount = snapshot.val()
-    })
   },
 }
 </script>
