@@ -3,12 +3,14 @@
 import Bio from "@/components/about/Bio.vue";
 import Interests from "@/components/about/Interests.vue";
 import Education from "@/components/about/Education.vue";
+import Snippet from "@/components/about/snippet.vue";
 export default {
   name: 'About',
   components: {
     Bio,
     Interests,
     Education,
+    Snippet,
   },
   data() {
     return {
@@ -18,6 +20,7 @@ export default {
         'Bio',
         'Interests',
         'Education',
+        'Snippet',
       ],
     }
   },
@@ -26,7 +29,6 @@ export default {
       return this.composants[this.choix]
     },
   }
-
 }
 </script>
 
@@ -71,6 +73,7 @@ export default {
           </div>
         </div>
         <div class="border-left snippet">
+          <Snippet></Snippet>
           <div class="scroll border-left">
             <span></span>
           </div>

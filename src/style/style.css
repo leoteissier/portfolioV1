@@ -320,6 +320,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Fira Code", monospace;
 }
 
 html {
@@ -328,8 +329,6 @@ html {
 }
 
 body {
-  font-family: "Fira Code", monospace;
-  color: #607B96;
   background-color: #010C15;
   height: 100%;
   width: 100%;
@@ -429,6 +428,7 @@ a {
   width: 100%;
   height: 100%;
   background-color: #011627;
+  color: #607B96;
   border: #1E2D3D solid 1px;
   border-radius: 8px;
   display: grid;
@@ -994,10 +994,71 @@ footer .logo {
   width: 50%;
   height: 100%;
   display: flex;
-  flex-direction: 0;
-  justify-content: 0;
-  align-items: 0;
-  overflow: hidden;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#description .snippet .code {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100% - 30px);
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 25px 50px;
+}
+#description .snippet .code::-webkit-scrollbar {
+  display: none;
+  width: 10px;
+  border-left: 1px solid #1E2D3D;
+}
+#description .snippet .code::-webkit-scrollbar-thumb {
+  background-color: #607B96;
+}
+#description .snippet .code .carte-code {
+  width: 100%;
+  margin: 25px 0;
+}
+#description .snippet .code .carte-code p {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+#description .snippet .code .carte-code img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+#description .snippet .code .carte-code .code_user {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+#description .snippet .code .carte-code .code_note {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+#description .snippet .code .carte-code .code_note img {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 0 10px;
+}
+#description .snippet .code .carte-code .code_note p:nth-child(2) {
+  margin-right: 7px;
+}
+#description .snippet .code .carte-code .function {
+  width: 100%;
+  padding: 20px 60px 20px 20px;
+  background-color: #010C15;
+  border: solid #1E2D3D 1px;
+  border-radius: 8px;
+  z-index: 1;
 }
 
 #contact {
@@ -1030,7 +1091,7 @@ footer .logo {
   background-color: #010C15;
   color: #607B96;
   border: solid #1E2D3D 1px;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .contact .formulaire input:focus {
   border: solid #607B96 1px !important;
@@ -1048,7 +1109,7 @@ footer .logo {
   background-color: #010C15;
   color: #607B96;
   border: solid #1E2D3D 1px;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .contact .formulaire textarea:focus {
   border: solid #607B96 1px !important;

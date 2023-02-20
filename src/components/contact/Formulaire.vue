@@ -91,10 +91,54 @@ export default {
       message: "",
       date: new Date().toLocaleDateString(),
       formSubmitted: false,
-
     };
   },
+  mounted() {
+    if (localStorage.name) {
+      this.name = localStorage.name;
+    }
+    if (localStorage.email) {
+      this.email = localStorage.email;
+    }
+    if (localStorage.subject) {
+      this.subject = localStorage.subject;
+    }
+    if (localStorage.message) {
+      this.message = localStorage.message;
+    }
+  },
+  watch: {
+    name() {
+      localStorage.name = this.name;
+    },
+    email() {
+      localStorage.email = this.email;
+    },
+    subject() {
+      localStorage.subject = this.subject;
+    },
+    message() {
+      localStorage.message = this.message;
+    },
+  },
   methods: {
+    validEmail: function (email) {
+      var re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    },
+    checkform : function(e) {
+      if (this.name && this.email && this.subject && this.message) {
+        if (this.validEmail(this.email)) {
+          return true;
+        } else {
+          alert("Veuillez entrer une adresse email valide");
+          e.preventDefault();
+        }
+      } else {
+        alert("Veuillez remplir tous les champs");
+        e.preventDefault();
+      }
+    },
     submitForm() {
       // Simuler l'envoi du formulaire avec succès (en vrai on enverrait les données au serveur)
       this.formSubmitted = true;
@@ -104,6 +148,8 @@ export default {
       this.subject = '';
       this.message = '';
 
+      // EmailJS----------------------------------------------------------------------------------------------------------------
+      // Récupérer les données du formulaire
       let templateParams = {
         name: this.name,
         email: this.email,
@@ -111,12 +157,13 @@ export default {
         message: this.message,
         date: this.date,
       };
+      // Envoyer les données au serveur
       emailjs.send('service_kgf181f','template_3z2qer7', templateParams, 'SoEDXX_w0v8XL4s8q')
-          .then((response) => {
-            console.log('SUCCESS!', response.status, response.text);
-          }, (err) => {
-            console.log('FAILED...', err);
-          });
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+      }, (err) => {
+        console.log('FAILED...', err);
+      });
     },
   },
 };
