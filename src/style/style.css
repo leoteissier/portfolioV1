@@ -981,7 +981,7 @@ footer .logo {
 }
 #description .description .personal-info {
   width: calc(100% - 30px);
-  padding: 20px;
+  padding: 25px 50px;
   display: flex;
   overflow: hidden;
 }

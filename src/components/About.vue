@@ -35,27 +35,27 @@ export default {
 <template>
   <section class="main">
     <div id="about">
-      <div class="nom-page1 border-bottom"><img class="petit-logo-arrow" src="../assets/arrow-drop-down.svg" alt=""><p>personal-info</p></div>
-      <div class="nom-page2 border-left border-bottom border-right"><p>personal-info</p><img class="petit-logo-cross" src="../assets/close.svg" alt=""></div>
+      <div class="nom-page1 border-bottom"><img class="petit-logo-arrow" src="/assets/arrow-drop-down.svg" alt=""><p>personal-info</p></div>
+      <div class="nom-page2 border-left border-bottom border-right"><p>personal-info</p><img class="petit-logo-cross" src="/assets/close.svg" alt=""></div>
       <div class="nom-page3 border-bottom"></div>
       <div class="details border-bottom flex">
         <div class="flex-center">
-          <img class="petit-logo-arrow" src="../assets/arrow-right-s-line.svg" alt="logo arrow">
-          <img class="logo" src="../assets/dossier-rose.png" alt="">
+          <img class="petit-logo-arrow" src="/assets/arrow-right-s-line.svg" alt="logo arrow">
+          <img class="logo" src="/assets/dossier-rose.png" alt="">
           <div class="text-18px">
             <span v-bind:class="{ 'color-white': isActive === 'Bio' }" @click="choix='Bio'; isActive = 'Bio'">bio</span>
           </div>
         </div>
         <div class="flex-center">
-          <img class="petit-logo-arrow" src="../assets/arrow-right-s-line.svg" alt="logo arrow">
-          <img class="logo" src="../assets/dossier-vert.png" alt="">
+          <img class="petit-logo-arrow" src="/assets/arrow-right-s-line.svg" alt="logo arrow">
+          <img class="logo" src="/assets/dossier-vert.png" alt="">
           <div class="text-18px">
             <span v-bind:class="{ 'color-white': isActive === 'Interests' }" @click="choix='Interests'; isActive = 'Interests'">interests</span>
           </div>
         </div>
         <div class="flex-center">
-          <img class="petit-logo-arrow" src="../assets/arrow-right-s-line.svg" alt="logo arrow">
-          <img class="logo" src="../assets/dossier-bleu.png" alt="">
+          <img class="petit-logo-arrow" src="/assets/arrow-right-s-line.svg" alt="logo arrow">
+          <img class="logo" src="/assets/dossier-bleu.png" alt="">
           <div class="text-18px">
             <span v-bind:class="{ 'color-white': isActive === 'Education' }" @click="choix='Education'; isActive = 'Education'">education</span>
           </div>

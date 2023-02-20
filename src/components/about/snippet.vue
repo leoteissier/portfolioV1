@@ -7,7 +7,7 @@
     <div class="carte-code">
       <div class="flex-center margin-bottom-10px">
         <div class="code_user">
-          <img src="/src/assets/user.png" alt="profil">
+          <img src="/assets/user.png" alt="profil">
           <div class="flex-column">
             <p class="color-secondary">@username</p>
             <p>Created 5 months ago</p>
@@ -15,12 +15,12 @@
         </div>
         <div class="code_note">
           <div class="flex">
-            <img src="/src/assets/chat-icon.svg" alt="details">
+            <img src="/assets/chat-icon.svg" alt="details">
             <p>details</p>
           </div>
           <div class="flex">
             <img @click="toggleStar" :src="starImage" alt="start">
-            <p>{{value}}</p>
+            <p>{{starCount}}</p>
             <p>start</p>
           </div>
         </div>
@@ -30,7 +30,8 @@
           <span class="color-quinary">
             En travaux f zhfzgf eqgfeg zjf
             hjeqfdjhq fhjqe f eqf ghqsjhfdsjq
-            fjyqesf hsqf hqv  fq hq
+            fjyqesf hsqf hqv  fq hqhscefsios jkesfhs
+            sqvsvsvdsfdj  euizhfiks  ezsfqg hs dqgu
           </span>
         </p>
       </div>
@@ -41,40 +42,56 @@
 </template>
 
 <script>
+import { db } from '/firebase.js';
+
 export default {
   name: "snippet",
   data() {
     return {
-      value: 0,
+      starCount : 0,
       clicked: false,
     }
+  },
+  firebase: {
+    // lie le compteur à la référence 'compteur' dans la base de données
+    starCount: db.ref('starCount'),
   },
   computed:{
     starImage() {
       if (this.clicked) {
-        return "/src/assets/star-fill.svg";
+        return "/assets/star-fill.svg";
       } else {
-        return "/src/assets/star-line.svg";
+        return "/assets/star-line.svg";
       }
     }
   },
   methods: {
     toggleStar() {
       if (!this.clicked) {
-        this.value += 1;
+        this.starCount  += 1;
         this.clicked = true;
       } else {
-        this.value -= 1;
+        this.starCount  -= 1;
         this.clicked = false;
       }
-      localStorage.setItem('note', this.note);
+    },
+    addStar() {
+      // Ajouter une étoile à la base de données Firebase
+      const starRef = firebase.database().ref('stars')
+      starRef.transaction((count) => (count || 0) + 1)
     },
   },
   mounted() {
-    const note = localStorage.getItem('note');
-    if (note) {
-      this.note = parseInt(note);
-    }
+    // Initialiser votre connexion Firebase
+    firebase.initializeApp(this.firebaseConfig)
+
+    // Créer une référence à votre base de données Firebase
+    const starRef = firebase.database().ref('stars')
+
+    // Écouter les mises à jour en temps réel de la base de données
+    starRef.on('value', (snapshot) => {
+      this.starCount = snapshot.val()
+    })
   },
 }
 </script>

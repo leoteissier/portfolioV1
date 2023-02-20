@@ -604,7 +604,7 @@ footer{
     overflow: hidden;
     .personal-info{
       width: calc(100% - 30px);
-      @include padding(20px);
+      padding: 25px 50px;
       display: flex;
       overflow: hidden;
     }

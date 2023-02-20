@@ -44,8 +44,8 @@ export default {
 <template>
   <section class="main">
     <div id="projects">
-      <div class="nom-page1 border-bottom"><img class="petit-logo-arrow" src="../assets/arrow-drop-down.svg" alt=""><p>projects</p></div>
-      <div class="nom-page2 border-left border-bottom border-right"><p>projects</p><img class="petit-logo-cross" src="../assets/close.svg" alt=""></div>
+      <div class="nom-page1 border-bottom"><img class="petit-logo-arrow" src="/assets/arrow-drop-down.svg" alt=""><p>projects</p></div>
+      <div class="nom-page2 border-left border-bottom border-right"><p>projects</p><img class="petit-logo-cross" src="/assets/close.svg" alt=""></div>
       <div class="nom-page3 border-bottom"></div>
       <div class="details-projects flex">
         <!--
@@ -57,13 +57,13 @@ export default {
         <div class="flex-center"><div class="position-checkbox"><label class="checkbox"><input @click="choix='Angularjs'" type="checkbox"><span class="checkmark"></span></label></div><img class="logo-projects" src="../assets/angularjs.svg" alt="logo angularjs"><p>Angular</p></div>
         <div class="flex-center"><div class="position-checkbox"><label class="checkbox"><input @click="choix='Symphony'" type="checkbox"><span class="checkmark"></span></label></div><img class="logo-projects" src="../assets/logo-symfony.svg" alt="logo symphony"><p>Symphony</p></div>
         -->
-        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='Javascript'" name="radio" type="radio" checked><span></span></label></div><img class="logo-projects" src="../assets/logo-javascript.svg" alt="logo javascript"><p>Javascript</p></div>
-        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='Css'" name="radio" type="radio"><span></span></label></div><img class="logo-projects" src="../assets/css3.svg" alt="logo css"><p>Css</p></div>
-        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='React'" name="radio" type="radio"><span></span></label></div><img class="logo-projects" src="../assets/reactjs.svg" alt="logo reactjs"><p>React</p></div>
-        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='Vuejs'" name="radio" type="radio"><span></span></label></div><img class="logo-projects" src="../assets/vuejs.svg" alt="logo vuejs"><p>Vuejs</p> </div>
-        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='Symphony'" name="radio" type="radio"><span></span></label></div><img class="logo-projects" src="../assets/logo-symfony.svg" alt="logo symfony"><p>Symphony</p></div>
-        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='Nextjs'" name="radio" type="radio"><span></span></label></div><img class="logo-projects" src="../assets/logo-nextjs.svg" alt="logo nextjs"><p>Nextjs</p></div>
-        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='Threejs'" name="radio" type="radio"><span></span></label></div><img class="logo-projects" src="../assets/three-js-icon.svg" alt="logo threejs"><p>Threejs</p></div>
+        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='Javascript'" name="radio" type="radio" checked><span></span></label></div><img class="logo-projects" src="/assets/logo-javascript.svg" alt="logo javascript"><p>Javascript</p></div>
+        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='Css'" name="radio" type="radio"><span></span></label></div><img class="logo-projects" src="/assets/css3.svg" alt="logo css"><p>Css</p></div>
+        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='React'" name="radio" type="radio"><span></span></label></div><img class="logo-projects" src="/assets/reactjs.svg" alt="logo reactjs"><p>React</p></div>
+        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='Vuejs'" name="radio" type="radio"><span></span></label></div><img class="logo-projects" src="/assets/vuejs.svg" alt="logo vuejs"><p>Vuejs</p> </div>
+        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='Symphony'" name="radio" type="radio"><span></span></label></div><img class="logo-projects" src="/assets/logo-symfony.svg" alt="logo symfony"><p>Symphony</p></div>
+        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='Nextjs'" name="radio" type="radio"><span></span></label></div><img class="logo-projects" src="/assets/logo-nextjs.svg" alt="logo nextjs"><p>Nextjs</p></div>
+        <div class="flex-center"><div class="position-checkbox"><label class="radio"><input @click="choix='Threejs'" name="radio" type="radio"><span></span></label></div><img class="logo-projects" src="/assets/three-js-icon.svg" alt="logo threejs"><p>Threejs</p></div>
        </div>
       <div class="border-left" id="list-projects">
         <section class="list-projects">

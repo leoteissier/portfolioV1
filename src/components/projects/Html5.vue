@@ -5,7 +5,7 @@
         <div class="img-card">
           <img src="" alt="">
         </div>
-        <img class="logo-card-html" src="../../assets/html5-black.svg" alt="logo html">
+        <img class="logo-card-html" src="/assets/html5-black.svg" alt="logo html">
         <div class="description-card border-top">
           <p>Duis aute irure dolor in velit esse cillum dolore.</p>
           <a class="button" href="">view-project</a>
@@ -18,7 +18,7 @@
         <div class="img-card">
           <img src="" alt="">
         </div>
-        <img class="logo-card-html" src="../../assets/html5-black.svg" alt="logo html">
+        <img class="logo-card-html" src="../../../public/assets/html5-black.svg" alt="logo html">
         <div class="description-card border-top">
           <p>Duis aute irure dolor in velit esse cillum dolore.</p>
           <a class="button" href="">view-project</a>

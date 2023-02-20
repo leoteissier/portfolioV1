@@ -5,7 +5,7 @@
       <div class="img-card">
         <img src="" alt="">
       </div>
-      <img class="logo-card-javascript" src="../../assets/logo-javascript-black.svg" alt="logo javascript">
+      <img class="logo-card-javascript" src="/assets/logo-javascript-black.svg" alt="logo javascript">
       <div class="description-card border-top">
         <p>Duis aute irure dolor in velit esse cillum dolore.</p>
         <a class="button" href="" target="_blank">view-project</a>
