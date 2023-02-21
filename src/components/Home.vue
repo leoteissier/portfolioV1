@@ -3,7 +3,6 @@
 </script>
 
 <template>
-  <section class="main">
     <!--faire apparaitre la page demander dans la nav-->
     <div id="home">
       <div id="home-left">
@@ -31,7 +30,6 @@
         </div>
       </div>
     </div>
-  </section>
 </template>
 
 <style scoped>

@@ -23,7 +23,7 @@ export default {
   },
   computed: {
     selectComponent() {
-      return this.composants[this.choix]
+      return this.composants.find((component) => component === this.choix)
     }
   }
 }
@@ -57,10 +57,9 @@ export default {
     </nav>
   </header>
 
-  <Home v-if="choix === 'Home'"></Home>
-  <About v-if="choix === 'About'"></About>
-  <Projects v-if="choix === 'Projects'"></Projects>
-  <Contact v-if="choix === 'Contact'"></Contact>
+  <section class="main">
+    <component :is="selectComponent" />
+  </section>
 
   <Footer></Footer>
 </template>

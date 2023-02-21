@@ -11,7 +11,6 @@ export default {
 
 
 <template>
-  <section class="main">
     <div id="contact">
       <div class="nom-page1 border-bottom"><img class="petit-logo-arrow" src="/assets/arrow-drop-down.svg" alt=""><p>contacts</p></div>
       <div class="nom-page2 border-left border-bottom border-right"><p>contacts</p><img class="petit-logo-cross" src="/assets/close.svg" alt=""></div>
@@ -25,7 +24,6 @@ export default {
         <Formulaire></Formulaire>
       </div>
     </div>
-  </section>
 </template>
 
 <style scoped>

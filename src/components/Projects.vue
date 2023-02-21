@@ -42,7 +42,6 @@ export default {
 </script>
 
 <template>
-  <section class="main">
     <div id="projects">
       <div class="nom-page1 border-bottom"><img class="petit-logo-arrow" src="/assets/arrow-drop-down.svg" alt=""><p>projects</p></div>
       <div class="nom-page2 border-left border-bottom border-right"><p>projects</p><img class="petit-logo-cross" src="/assets/close.svg" alt=""></div>
@@ -81,7 +80,6 @@ export default {
       </div>
 
     </div>
-  </section>
 </template>
 
 <style scoped>
