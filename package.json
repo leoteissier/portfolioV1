@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-vuejs",
+  "name": "portfolio",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,7 @@
     "@emailjs/browser": "^3.10.0",
     "emailjs-com": "^3.2.0",
     "firebase": "^9.17.1",
+    "firestore": "^1.1.6",
     "three": "^0.149.0",
     "vue": "^3.2.45",
     "vue-resource": "^1.5.3",
@@ -21,5 +22,17 @@
     "@vuelidate/core": "^2.0.0",
     "@vuelidate/validators": "^2.0.0",
     "vite": "^4.0.0"
-  }
+  },
+  "description": "Bienvenue sur mon portfolio personnel, créé avec Vue.js.",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoteissier/portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leoteissier/portfolio/issues"
+  },
+  "homepage": "https://github.com/leoteissier/portfolio#readme"
 }

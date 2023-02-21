@@ -57,10 +57,10 @@ export default {
     </nav>
   </header>
 
-  <home v-if="choix === 'Home'"></home>
-  <about v-if="choix === 'About'"></about>
-  <projects v-if="choix === 'Projects'"></projects>
-  <contact v-if="choix === 'Contact'"></contact>
+  <Home v-if="choix === 'Home'"></Home>
+  <About v-if="choix === 'About'"></About>
+  <Projects v-if="choix === 'Projects'"></Projects>
+  <Contact v-if="choix === 'Contact'"></Contact>
 
   <Footer></Footer>
 </template>
