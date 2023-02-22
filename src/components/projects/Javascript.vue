@@ -8,7 +8,7 @@
       <img class="logo-card-javascript" src="/assets/logo-javascript-black.svg" alt="logo javascript">
       <div class="description-card border-top">
         <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-        <a class="button" href="" target="_blank">view-project</a>
+        <a class="button" target="_blank">view-project</a>
       </div>
     </div>
   </div>

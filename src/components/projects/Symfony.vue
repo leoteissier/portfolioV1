@@ -8,7 +8,7 @@
       <img class="logo-card-symfony" src="/assets/logo-symfony-black.svg" alt="logo symfony">
       <div class="description-card border-top">
         <p>Duis aute irure dolor in velit esse cillum dolore.</p>
-        <a class="button" href="">view-project</a>
+        <router-link class="button" target="_blank" to="/projects">view-project</router-link>
       </div>
     </div>
   </div>
