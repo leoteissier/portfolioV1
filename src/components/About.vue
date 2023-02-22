@@ -1,9 +1,10 @@
 <script>
-// import { Bio, Interests, Education } from '@/components/index.js'
+// import { Bio, Interests, Education, Snippet } from '@/components/index.js'
 import Bio from "@/components/about/Bio.vue";
 import Interests from "@/components/about/Interests.vue";
 import Education from "@/components/about/Education.vue";
 import Snippet from "@/components/about/snippet.vue";
+
 export default {
   name: 'About',
   components: {

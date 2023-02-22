@@ -16,7 +16,6 @@ body{
   background-color: $window-color;
   height: 100%;
   width: 100%;
-  margin: 0;
   padding: 5vh;
 }
 body::-webkit-scrollbar {
@@ -601,12 +600,41 @@ footer{
     @include position(relative, 0, 0, 0, 0);
     @include width-height(50%, 100%);
     display: flex;
-    overflow: hidden;
     .personal-info{
-      width: calc(100% - 30px);
+      position: absolute;
+      overflow-x: hidden;
+      overflow-y: auto;
+      @include width-height(calc(100% - 30px), 100%);
       padding: 25px 50px;
-      display: flex;
-      overflow: hidden;
+      word-wrap: break-word; /* Le texte revient à la ligne quand il atteint la fin de la div */
+      counter-set: line-number; /* Initialise le compteur de ligne à 0 */
+      &::-webkit-scrollbar {
+        display: none;
+        width: 10px;
+        border-left: 1px solid $border-color;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: $font-color;
+      }
+      p{
+        margin: 0;
+        line-height: 1.5em;
+        counter-increment: line-number;
+        &:before{
+          content: "/*";
+          display: inline-block;
+          width: 20px;
+          text-align: right;
+          margin-right: 5px;
+        }
+        &:after{
+          content: "*/";
+          display: inline-block;
+          width: 20px;
+          text-align: left;
+          margin-left: 5px;
+        }
+      }
     }
   }
   .snippet{
@@ -663,7 +691,7 @@ footer{
         }
         .function{
           width: 100%;
-          padding: 20px 60px 20px 20px;
+          padding: 20px;
           background-color: $window-color;
           border: solid $border-color 1px;
           border-radius: 8px;
@@ -747,3 +775,4 @@ footer{
     justify-content: flex-start;
   }
 }
+

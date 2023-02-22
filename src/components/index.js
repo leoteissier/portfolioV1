@@ -18,6 +18,7 @@ import Formulaire from "@/components/contact/Formulaire.vue";
 import Bio from "@/components/about/Bio.vue";
 import Education from "@/components/about/Education.vue";
 import Interests from "@/components/about/Interests.vue";
+import Snippet from "@/components/about/snippet.vue";
 
 export {
     Footer,
@@ -36,4 +37,5 @@ export {
     Bio,
     Education,
     Interests,
+    Snippet
 }

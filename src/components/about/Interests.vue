@@ -1,39 +1,12 @@
 <template>
-  <div>
-    <div class="flex">
-      <p class="margin-right-20px">1</p><p>*/</p>
-    </div>
-    <div class="flex">
-      <p class="margin-right-20px">2</p><p>zqdzqdq</p>
-    </div>
-    <div class="flex">
-      <p class="margin-right-20px">3</p><p></p>
-    </div>
-    <div class="flex">
-      <p class="margin-right-20px">4</p><p></p>
-    </div>
-    <div class="flex">
-      <p class="margin-right-20px">5</p><p></p>
-    </div>
-    <div class="flex">
-      <p class="margin-right-20px">6</p><p></p>
-    </div>
-    <div class="flex">
-      <p class="margin-right-20px">7</p><p></p>
-    </div>
-    <div class="flex">
-      <p class="margin-right-20px">8</p><p></p>
-    </div>
-    <div>
-      <p class="margin-right-20px">9</p><p></p>
-    </div>
-    <div class="flex">
-      <p class="margin-right-20px">10</p><p></p>
-    </div>
-    <div class="flex">
-      <p class="margin-right-20px">11</p><p>*/</p>
-    </div>
-  </div>
+  <p><br>
+    In my free time, I enjoy exploring new web development
+    tools and techniques to stay up-to-date with the latest trends in the industry.<br>
+    I also like to work on personal coding projects to challenge myself and improve my skills.<br>
+    Outside of web development, I'm an avid sports fan, and I enjoy doing calisthenics with my friends.<br>
+    I also love travelling and discovering new cultures, and I find that it often inspires me in my creative work.<br>
+    Finally, I enjoy reading about technology and entrepreneurship and learning from the experiences of successful business leaders.<br>
+  </p>
 </template>
 
 <script>

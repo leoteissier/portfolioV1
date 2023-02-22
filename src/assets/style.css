@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
+@charset "UTF-8";
 .flex {
   display: flex;
 }
@@ -332,7 +332,6 @@ body {
   background-color: #010C15;
   height: 100%;
   width: 100%;
-  margin: 0;
   padding: 5vh;
 }
 
@@ -977,13 +976,43 @@ footer .logo {
   width: 50%;
   height: 100%;
   display: flex;
-  overflow: hidden;
 }
 #description .description .personal-info {
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: auto;
   width: calc(100% - 30px);
+  height: 100%;
   padding: 25px 50px;
-  display: flex;
-  overflow: hidden;
+  word-wrap: break-word; /* Le texte revient à la ligne quand il atteint la fin de la div */
+  counter-set: line-number; /* Initialise le compteur de ligne à 0 */
+}
+#description .description .personal-info::-webkit-scrollbar {
+  display: none;
+  width: 10px;
+  border-left: 1px solid #1E2D3D;
+}
+#description .description .personal-info::-webkit-scrollbar-thumb {
+  background-color: #607B96;
+}
+#description .description .personal-info p {
+  margin: 0;
+  line-height: 1.5em;
+  counter-increment: line-number;
+}
+#description .description .personal-info p:before {
+  content: "/*";
+  display: inline-block;
+  width: 20px;
+  text-align: right;
+  margin-right: 5px;
+}
+#description .description .personal-info p:after {
+  content: "*/";
+  display: inline-block;
+  width: 20px;
+  text-align: left;
+  margin-left: 5px;
 }
 #description .snippet {
   position: relative;
@@ -1054,7 +1083,7 @@ footer .logo {
 }
 #description .snippet .code .carte-code .function {
   width: 100%;
-  padding: 20px 60px 20px 20px;
+  padding: 20px;
   background-color: #010C15;
   border: solid #1E2D3D 1px;
   border-radius: 8px;
