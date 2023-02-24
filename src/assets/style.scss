@@ -41,7 +41,7 @@ body::-webkit-scrollbar {
 }
 p{
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.2;
 }
 
 small{
@@ -516,14 +516,12 @@ footer{
 }
   .project{
     width: 375px;
-    height: 300px;
     margin: 25px;
     .card{
       position: relative;
       display: flex;
       flex-direction: column;
       width: 100%;
-      height: 100%;
       border-radius: 15px;
       border: solid $border-color 1px;
       .img-card{
@@ -565,12 +563,13 @@ footer{
       //}
       .description-card{
         @include flex(column, space-between, flex-start);
-        @include width-height(100%, 150px);
+        width: 100%;
         flex-grow: 1;
         border-radius: 0 0 15px 15px;
         padding: 10px;
         background-color: $main-color;
         .button{
+          margin-top: 10px;
           @include padding(10px);
           @include border-radius(8px);
           @include background($border-color);
