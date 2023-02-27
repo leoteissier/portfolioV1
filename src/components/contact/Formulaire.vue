@@ -1,16 +1,7 @@
 <template>
   <div class="formulaire">
-    <!--form submitted-->
-<!--    <div class="width-75">-->
-<!--      <div class="flex-column flex-center">-->
-<!--        <h2 class="color-white">Thank you!</h2>-->
-<!--        <p>Your message has been accepted. You will recieve answer really soon!</p>-->
-<!--        <button>send-new-message</button>-->
-<!--      </div>-->
-<!--    </div>-->
-    <!--end form submitted-->
     <!--form-->
-    <form @submit.prevent>
+    <form v-if="!showConfirmationMessage" @submit.prevent>
       <div class="flex-column margin-top-10px">
         <label class="margin-bottom-10px" for="name">_name :</label>
         <input type="text" v-model.trim="name" id="name" name="name" placeholder="votre prénom"/>
@@ -32,6 +23,15 @@
       <div v-if="showErrorMessage" class="error-message">Please fill in all fields</div>
     </form>
     <!--end form-->
+    <!--form submitted-->
+    <div v-else class="width-75">
+      <div class="flex-column flex-center">
+        <h2 class="color-white">Thank you!</h2>
+        <p>Your message has been accepted. You will recieve answer really soon!</p>
+        <button @click="resetForm">send-new-message</button>
+      </div>
+    </div>
+    <!--end form submitted-->
   </div>
   <div class="form-result border-left position-rel">
     <div class="margin-left-50px width-form-result">
@@ -88,16 +88,23 @@ export default {
   name: "formulaire",
   data() {
     return {
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
+      name: localStorage.getItem("name") || "",
+      email: localStorage.getItem("email") || "",
+      subject: localStorage.getItem("subject") || "",
+      message: localStorage.getItem("message") || "",
+
       emailIsValid: false,
       showErrorMessage: false,
-      date: new Date().toLocaleString(),
+      showConfirmationMessage: false,
+
+      date: new Date().toLocaleDateString()
     };
   },
   methods: {
+    validateEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    },
     submitForm() {
       // Vérifiez si les champs requis sont remplis
       if (!this.name || !this.email || !this.subject || !this.message) {
@@ -115,7 +122,15 @@ export default {
         this.emailIsValid = false;
       }
 
-      // Créez un objet de message
+     //si emailIsValid est false et que showErrormessage est false alors on envoie le message
+      if(!this.emailIsValid && !this.showErrorMessage){
+        // Afficher le message de confirmation
+        this.showConfirmationMessage = true;
+        // Envoyer le formulaire
+        this.sendForm();
+      }
+    },
+    sendForm() {
       const message = {
         name: this.name,
         email: this.email,
@@ -123,15 +138,56 @@ export default {
         message: this.message,
         date: new Date().toUTCString()
       };
-
-      // Envoyez le message (remplacez cela par votre propre code d'envoi de formulaire)
       console.log(message);
-    },
-    validateEmail(email) {
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      return emailRegex.test(email);
-    }
 
+      // const nodemailer = require('nodemailer');
+      // const transporter = nodemailer.createTransport({
+      //   service: 'gmail',
+      //   auth: {
+      //     user: 'acsioses6@gmail.com',
+      //     pass: 'sarahleo78'
+      //   }
+      // });
+      //
+      // const message = {
+      //   from: '{{ email }}',
+      //   to: 'leo.teissier@numericable.fr',
+      //   subject: 'New message from your website',
+      //   html: ' <p>Name: ${name}</p><br><p>Subject: ${subject}</p><br><p>Message: ${message}</p>'
+      // };
+      //
+      // transporter.sendMail(message, (err, info) => {
+      //   if (err) {
+      //     console.log(err);
+      //   } else {
+      //     console.log(info);
+      //   }
+      // });
+    },
+    resetForm(){
+      // Réinitialiser les valeurs des propriétés de données à leur état initial
+      this.name = "";
+      this.email = "";
+      this.subject = "";
+      this.message = "";
+      this.emailIsValid = false;
+      this.showErrorMessage = false;
+      this.showConfirmationMessage = false;
+      // clear localStorage
+      localStorage.clear();
+    },
+    clearLocalStorage() {
+      // clear localStorage
+      localStorage.clear();
+    },
+    mounted() {
+      // add the beforeunload event listener to clear localStorage when the page is reloaded
+      window.addEventListener('beforeunload', this.clearLocalStorage);
+    },
+    beforeUnmount() {
+      // remove the beforeunload event listener when the component is unmounted
+      window.removeEventListener('beforeunload', this.clearLocalStorage);
+    },
   },
   watch: {
     name() {
