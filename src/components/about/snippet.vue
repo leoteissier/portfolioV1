@@ -184,6 +184,7 @@
           </div>
           <div class="flex">
             <img @click="toggleStar" :src="starImage" alt="start">
+<!--            <p>{{starCount}}</p>-->
             <p>start</p>
           </div>
         </div>

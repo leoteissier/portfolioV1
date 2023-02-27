@@ -13,6 +13,7 @@
     "firebase": "^9.17.1",
     "firestore": "^1.1.6",
     "three": "^0.149.0",
+    "vee-validate": "^4.7.4",
     "vue": "^3.2.45",
     "vue-resource": "^1.5.3",
     "vue-router": "^4.1.6",

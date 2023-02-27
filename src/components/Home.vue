@@ -12,7 +12,7 @@
           <h2 class="color-secondary">> junior web developer</h2>
           <div id="game-explain">
             <p class="color-font">// you can also see it on my Github page</p>
-            <p><span class="color-secondary">const</span> <span class="color-quaternary">githubLink</span> <span class="color-white">=</span> <span class="color-quinary">"https://github.com/Leo-Teissier"</span></p>
+            <p><span class="color-secondary">const</span> <span class="color-quaternary">githubLink</span> <span class="color-white">=</span> <a href="https://github.com/leoteissier" class="color-quinary" target="_blank">"https://github.com/leoteissier"</a></p>
           </div>
         </div>
       </div>
