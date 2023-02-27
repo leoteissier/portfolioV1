@@ -40,8 +40,8 @@ body::-webkit-scrollbar {
   color: $fifth-color;
 }
 p{
-    font-size: 1rem;
-    line-height: 1.2;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 small{
@@ -514,77 +514,77 @@ footer{
     background-color: $font-color;
   }
 }
-  .project{
-    width: 375px;
-    margin: 25px;
-    .card{
-      position: relative;
-      display: flex;
-      flex-direction: column;
+.project{
+  width: 375px;
+  margin: 25px;
+  .card{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 15px;
+    border: solid $border-color 1px;
+    .img-card{
       width: 100%;
-      border-radius: 15px;
-      border: solid $border-color 1px;
-      .img-card{
-        width: 100%;
-        height: 150px;
-        border-radius: 15px 15px 0 0;
-      }
-      .logo-card-javascript{
-        @include logo-card;
-        background-color:  $javascript-color;
-      }
-      .logo-card-react{
-        @include logo-card;
-        background-color: $react-color;
-      }
-      .logo-card-vue{
-        @include logo-card;
-        background-color: $vuejs-color;
-      }
-      .logo-card-symfony{
-        @include logo-card;
-        background-color: $symfony-color;
-      }
-      .logo-card-nextjs{
-        @include logo-card;
-        background-color: $nextjs-color;
-      }
-      .logo-card-threejs{
-        @include logo-card;
-        background-color: $threejs-color;
-      }
-      .logo-card-css{
-       @include logo-card;
-        background-color: $css-color;
-      }
-      //.logo-card-html{
-      //@include logo-card;
-      //  background-color: #E34C26;
-      //}
-      .description-card{
-        @include flex(column, space-between, flex-start);
-        width: 100%;
-        flex-grow: 1;
-        border-radius: 0 0 15px 15px;
-        padding: 10px;
-        background-color: $main-color;
-        .button{
-          margin-top: 10px;
-          @include padding(10px);
-          @include border-radius(8px);
-          @include background($border-color);
-          color: $white;
-          border: none;
-          cursor: pointer;
+      height: 150px;
+      border-radius: 15px 15px 0 0;
+    }
+    .logo-card-javascript{
+      @include logo-card;
+      background-color:  $javascript-color;
+    }
+    .logo-card-react{
+      @include logo-card;
+      background-color: $react-color;
+    }
+    .logo-card-vue{
+      @include logo-card;
+      background-color: $vuejs-color;
+    }
+    .logo-card-symfony{
+      @include logo-card;
+      background-color: $symfony-color;
+    }
+    .logo-card-nextjs{
+      @include logo-card;
+      background-color: $nextjs-color;
+    }
+    .logo-card-threejs{
+      @include logo-card;
+      background-color: $threejs-color;
+    }
+    .logo-card-css{
+      @include logo-card;
+      background-color: $css-color;
+    }
+    //.logo-card-html{
+    //@include logo-card;
+    //  background-color: #E34C26;
+    //}
+    .description-card{
+      @include flex(column, space-between, flex-start);
+      width: 100%;
+      flex-grow: 1;
+      border-radius: 0 0 15px 15px;
+      padding: 10px;
+      background-color: $main-color;
+      .button{
+        margin-top: 10px;
+        @include padding(10px);
+        @include border-radius(8px);
+        @include background($border-color);
+        color: $white;
+        border: none;
+        cursor: pointer;
+        transition: all .2s ease-in-out;
+        &:hover{
+          @include background($secondary-color);
           transition: all .2s ease-in-out;
-          &:hover{
-            @include background($secondary-color);
-            transition: all .2s ease-in-out;
-          }
         }
       }
     }
   }
+}
 //about---------------------------------------------------
 #about{
   @include grid(300px 230px 1fr 20px, 50px 150px 50px 1fr,0);
@@ -653,7 +653,7 @@ footer{
         border-left: 1px solid $border-color;
       }
       &::-webkit-scrollbar-thumb {
-          background-color: $font-color;
+        background-color: $font-color;
       }
       .carte-code{
         width: 100%;
@@ -720,6 +720,11 @@ footer{
     border-left: solid $border-color 1px;
     form{
       width: 70%;
+      .error-message{
+        color: $error-color;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+      }
     }
     input{
       @include padding(10px);

@@ -19,8 +19,8 @@
         <label class="margin-bottom-10px" for="message">_message :</label>
         <textarea name="message" v-model.trim="message" id="message" cols="30" rows="10" placeholder="Votre message"></textarea>
       </div>
-      <button @click="submitForm">_submit_message</button>
       <div v-if="showErrorMessage" class="error-message">Please fill in all fields</div>
+      <button @click="submitForm">_submit_message</button>
     </form>
     <!--end form-->
     <!--form submitted-->
