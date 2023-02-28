@@ -9,7 +9,6 @@ import Css3 from "@/components/projects/Css3.vue";
 import Javascript from "@/components/projects/Javascript.vue";
 import Vuejs from "@/components/projects/Vuejs.vue";
 import React from "@/components/projects/React.vue";
-import Nextjs from "@/components/projects/Nextjs.vue";
 import Symfony from "@/components/projects/Symfony.vue";
 import Threejs from "@/components/projects/Threejs.vue";
 
@@ -31,7 +30,6 @@ export {
     React,
     Vuejs,
     Symfony,
-    Nextjs,
     Threejs,
     Formulaire,
     Bio,

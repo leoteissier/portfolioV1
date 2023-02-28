@@ -871,6 +871,15 @@ footer .logo {
   padding: 5px;
   background-color: #F7DF1E;
 }
+.project .card .logo-card-css {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  padding: 5px;
+  background-color: #1572B6;
+}
 .project .card .logo-card-react {
   position: absolute;
   top: 10px;
@@ -896,15 +905,6 @@ footer .logo {
   width: 40px;
   height: auto;
   padding: 5px;
-  background-color: #7f7f7f;
-}
-.project .card .logo-card-nextjs {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 40px;
-  height: auto;
-  padding: 5px;
   background-color: #ffffff;
 }
 .project .card .logo-card-threejs {
@@ -915,15 +915,6 @@ footer .logo {
   height: auto;
   padding: 5px;
   background-color: #000000;
-}
-.project .card .logo-card-css {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 40px;
-  height: auto;
-  padding: 5px;
-  background-color: #1572B6;
 }
 .project .card .description-card {
   display: flex;

@@ -533,6 +533,10 @@ footer{
       @include logo-card;
       background-color:  $javascript-color;
     }
+    .logo-card-css{
+      @include logo-card;
+      background-color: $css-color;
+    }
     .logo-card-react{
       @include logo-card;
       background-color: $react-color;
@@ -545,22 +549,10 @@ footer{
       @include logo-card;
       background-color: $symfony-color;
     }
-    .logo-card-nextjs{
-      @include logo-card;
-      background-color: $nextjs-color;
-    }
     .logo-card-threejs{
       @include logo-card;
       background-color: $threejs-color;
     }
-    .logo-card-css{
-      @include logo-card;
-      background-color: $css-color;
-    }
-    //.logo-card-html{
-    //@include logo-card;
-    //  background-color: #E34C26;
-    //}
     .description-card{
       @include flex(column, space-between, flex-start);
       width: 100%;
@@ -780,4 +772,3 @@ footer{
     justify-content: flex-start;
   }
 }
-

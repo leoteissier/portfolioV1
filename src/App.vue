@@ -19,6 +19,7 @@ export default {
         'Projects',
         'Contact',
       ],
+      show: true,
     }
   },
   computed: {
@@ -56,11 +57,9 @@ export default {
       </div>
     </nav>
   </header>
-
-  <section class="main">
+  <section v-if="show" class="main">
     <component :is="selectComponent" />
   </section>
-
   <Footer></Footer>
 </template>
 

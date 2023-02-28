@@ -5,7 +5,7 @@
       <div class="img-card">
         <img src="" alt="">
       </div>
-      <img class="logo-card-react" src="/assets/reactjs-black.svg" alt="logo react">
+      <img class="logo-card-react" src="/assets/react-black.svg" alt="logo react">
       <div class="description-card border-top">
         <p>Duis aute irure dolor in velit esse cillum dolore.</p>
         <router-link class="button" target="_blank" to="/projects">view-project</router-link>

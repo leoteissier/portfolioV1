@@ -180,14 +180,6 @@ export default {
       // clear localStorage
       localStorage.clear();
     },
-    mounted() {
-      // add the beforeunload event listener to clear localStorage when the page is reloaded
-      window.addEventListener('beforeunload', this.clearLocalStorage);
-    },
-    beforeUnmount() {
-      // remove the beforeunload event listener when the component is unmounted
-      window.removeEventListener('beforeunload', this.clearLocalStorage);
-    },
   },
   watch: {
     name() {
