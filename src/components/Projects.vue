@@ -61,10 +61,7 @@ export default {
         <transition-group name="fade" tag="section" class="list-projects">
           <div v-for="component in component" :key="component">
             <transition name="fade">
-              <div v-show="selectComponent.includes(component)"
-                   @before-enter="beforeEnter"
-                   @before-leave="beforeLeave"
-                   :class="{ 'fade-enter-active': entering, 'fade-leave-active': leaving }">
+              <div v-if="selectComponent.includes(component)" :class="{ 'fade-enter-active': entering, 'fade-leave-active': leaving }">
                 <component :is="component" />
               </div>
             </transition>
@@ -79,16 +76,5 @@ export default {
 </template>
 
 <style scoped>
-.fade-enter-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter, .fade-leave-active {
-  opacity: 0;
-}
 
 </style>

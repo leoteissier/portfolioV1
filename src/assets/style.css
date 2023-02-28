@@ -941,6 +941,15 @@ footer .logo {
   background: #4D5BCE;
   transition: all 0.2s ease-in-out;
 }
+.project .fade-enter-active {
+  transition: opacity 0.5s ease;
+}
+.project .fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+.project .fade-enter, .project .fade-leave-active {
+  opacity: 0;
+}
 
 #about {
   display: grid;

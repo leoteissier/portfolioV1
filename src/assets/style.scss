@@ -576,6 +576,17 @@ footer{
       }
     }
   }
+  .fade-enter-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .fade-enter, .fade-leave-active {
+    opacity: 0;
+  }
 }
 //about---------------------------------------------------
 #about{
