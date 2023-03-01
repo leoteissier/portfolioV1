@@ -5,7 +5,7 @@
       <div class="img-card">
         <img src="" alt="">
       </div>
-      <img class="logo-card-javascript" src="/assets/javascript-black.svg" alt="logo javascript">
+      <img class="logo-card-javascript" src="/assets/Javascript-black.svg" alt="logo javascript">
       <div class="description-card border-top">
         <p>My weather app is a simple and user-friendly application that provides real-time weather updates for any location.</p>
         <a class="button" href="https://weatherapp.leoteissier.fr" target="_blank">view-project</a>

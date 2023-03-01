@@ -5,7 +5,7 @@
         <div class="img-card">
           <img src="" alt="">
         </div>
-        <img class="logo-card-css" src="/assets/css3-black.svg" alt="logo css">
+        <img class="logo-card-css" src="/assets/Css-black.svg" alt="logo css">
         <div class="description-card border-top">
           <p>
             My flipcoin app is a fun and interactive way to make decisions.

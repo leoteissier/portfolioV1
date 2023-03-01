@@ -1,38 +1,79 @@
 <script>
-import Javascript from '@/components/projects/Javascript.vue'
-import Css3 from '@/components/projects/Css3.vue'
-import React from '@/components/projects/React.vue'
-import Vuejs from '@/components/projects/Vuejs.vue'
-import Symfony from '@/components/projects/Symfony.vue'
-import Threejs from '@/components/projects/Threejs.vue'
 export default {
   name: 'Projects',
-  components: {
-    Javascript,
-    Css3,
-    Vuejs,
-    React,
-    Symfony,
-    Threejs,
-  },
   data() {
     return {
-      choix: 'Javascript',
-      component: [
-        'Javascript',
-        'Css3',
-        'Vuejs',
-        'React',
-        'Symfony',
-        'Threejs',
+      langages: [
+          'Javascript',
+          'Css',
+          'Vuejs',
+          'React',
+          'Threejs',
+          'Symfony',
       ],
-      checkedComponents: [],
+      projets: [
+        {
+          id: 1,
+          titre: 'Weather App',
+          langages: 'Javascript',
+          description: 'My weather app is a simple and user-friendly application that provides real-time weather updates for any location.',
+          // image: '',
+          lien: 'https://weatherapp.leoteissier.fr',
+        },
+        {
+          id: 2,
+          titre: 'Flip Coin',
+          langages: 'Css',
+          description: 'My flipcoin app is a fun and interactive way to make decisions. With just a flip of a virtual coin, users can quickly and easily settle any dispute or make a random choice.',
+          // image: '',
+          lien: 'https://flipcoin.leoteissier.fr',
+        },
+        {
+          id: 3,
+          titre: 'Todo List',
+          langages: 'Vuejs',
+          description: 'Une description de mon projet 3.',
+          // image: '',
+          lien: 'https://todolist.leoteissier.fr',
+        },
+        {
+          id: 4,
+          titre: 'Todo List',
+          langages: 'React',
+          description: 'Une description de mon projet 4.',
+          // image: '',
+          lien: 'https://todolist.leoteissier.fr',
+        },
+        {
+          id: 5,
+          titre: 'Todo List',
+          langages: 'Threejs',
+          description: 'Une description de mon projet 5.',
+          // image: '',
+          lien: 'https://todolist.leoteissier.fr',
+        },
+        {
+          id: 6,
+          titre: 'Todo List',
+          langages: 'Symfony',
+          description: 'Une description de mon projet 6.',
+          // image: '',
+          lien: 'https://todolist.leoteissier.fr',
+        },
+      ],
+      checkedLangages: [],
     }
   },
   computed: {
-    selectComponent() {
-      return this.checkedComponents.length ? this.checkedComponents : this.component
-    }
+    filteredProjets() {
+      if (this.checkedLangages.length === 0) {
+        return this.projets;
+      } else {
+        return this.projets.filter((p) =>
+            this.checkedLangages.includes(p.langages)
+        );
+      }
+    },
   },
 }
 </script>
@@ -44,33 +85,43 @@ export default {
       <div class="nom-page3 border-bottom"></div>
       <div class="details-projects flex">
 
-        <div v-for="component in component" :key="component" class="flex-center">
+        <div class="flex-center" v-for="l in langages" :key="l">
           <div class="position-checkbox">
             <label class="checkbox">
-              <input type="checkbox" :value="component" v-model="checkedComponents" />
+              <input type="checkbox" v-model="checkedLangages" :value="l" />
               <span class="checkmark"></span>
             </label>
           </div>
-          <img class="logo-projects" :src="`/assets/${component.toLowerCase()}.svg`" :alt="`${component} logo`" />
-          <p>{{ component }}</p>
+          <img class="logo-projects" :src="`/assets/${l}.svg`" :alt="`${l} logo`">
+          <p>{{ l }}</p>
         </div>
 
       </div>
 
       <div class="border-left" id="list-projects">
+
         <section class="list-projects">
-          <div v-for="component in component" :key="component">
-              <div v-if="selectComponent.includes(component)">
-                <component :is="component" />
+          <div v-for="p in filteredProjets" :key="p.id">
+            <div class="project">
+              <p class="margin-bottom-10px"><span class="color-secondary">Project {{ p.langages }}</span> // _{{ p.titre }}</p>
+              <div class="card">
+                <div class="img-card">
+                  <img :class="`logo-card-${p.langages}`" :src="`/assets/${p.langages}-black.svg`" :alt="`${p.titre} logo`" />
+                </div>
+                <div class="description-card border-top">
+                  <p>{{ p.description }}</p>
+                  <a class="button" :href="p.lien" target="_blank">view-project</a>
+                </div>
               </div>
+            </div>
           </div>
         </section>
         <div class="scroll border-left">
           <span></span>
         </div>
-      </div>
 
-    </div>
+      </div>
+  </div>
 </template>
 
 <style scoped>

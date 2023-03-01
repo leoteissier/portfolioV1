@@ -717,6 +717,11 @@ footer .logo {
   width: 100%;
   height: 100%;
 }
+#projects .logo-projects {
+  margin: 10px;
+  width: 30px;
+  height: auto;
+}
 #projects .details-projects {
   grid-column: 1/2;
   grid-row: 2/5;
@@ -725,11 +730,6 @@ footer .logo {
   justify-content: flex-start;
   align-items: flex-start;
   padding: 10px;
-}
-#projects .details-projects .logo-projects {
-  margin: 10px;
-  width: 30px;
-  height: auto;
 }
 #projects .details-projects .position-checkbox {
   width: 20px;
@@ -862,7 +862,7 @@ footer .logo {
   height: 150px;
   border-radius: 15px 15px 0 0;
 }
-.project .card .logo-card-javascript {
+.project .card .logo-card-Javascript {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -871,7 +871,7 @@ footer .logo {
   padding: 5px;
   background-color: #F7DF1E;
 }
-.project .card .logo-card-css {
+.project .card .logo-card-Css {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -880,7 +880,7 @@ footer .logo {
   padding: 5px;
   background-color: #1572B6;
 }
-.project .card .logo-card-react {
+.project .card .logo-card-React {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -889,7 +889,7 @@ footer .logo {
   padding: 5px;
   background-color: #61DAFB;
 }
-.project .card .logo-card-vue {
+.project .card .logo-card-Vuejs {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -898,7 +898,7 @@ footer .logo {
   padding: 5px;
   background-color: #4FC08D;
 }
-.project .card .logo-card-symfony {
+.project .card .logo-card-Symfony {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -907,7 +907,7 @@ footer .logo {
   padding: 5px;
   background-color: #ffffff;
 }
-.project .card .logo-card-threejs {
+.project .card .logo-card-Threejs {
   position: absolute;
   top: 10px;
   right: 10px;

@@ -5,7 +5,7 @@
       <div class="img-card">
         <img src="" alt="">
       </div>
-      <img class="logo-card-threejs" src="/assets/three-js-white.svg" alt="logo threejs">
+      <img class="logo-card-threejs" src="/assets/Threejs-black.svg" alt="logo threejs">
       <div class="description-card border-top">
         <p>Duis aute irure dolor in velit esse cillum dolore.</p>
         <router-link class="button" target="_blank" to="/projects">view-project</router-link>
