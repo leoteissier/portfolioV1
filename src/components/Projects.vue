@@ -10,8 +10,8 @@ export default {
   components: {
     Javascript,
     Css3,
-    React,
     Vuejs,
+    React,
     Symfony,
     Threejs,
   },
@@ -21,8 +21,8 @@ export default {
       component: [
         'Javascript',
         'Css3',
-        'React',
         'Vuejs',
+        'React',
         'Symfony',
         'Threejs',
       ],
@@ -58,15 +58,13 @@ export default {
       </div>
 
       <div class="border-left" id="list-projects">
-        <transition-group name="fade" tag="section" class="list-projects">
+        <section class="list-projects">
           <div v-for="component in component" :key="component">
-            <transition name="fade">
-              <div v-if="selectComponent.includes(component)" :class="{ 'fade-enter-active': entering, 'fade-leave-active': leaving }">
+              <div v-if="selectComponent.includes(component)">
                 <component :is="component" />
               </div>
-            </transition>
           </div>
-        </transition-group>
+        </section>
         <div class="scroll border-left">
           <span></span>
         </div>
