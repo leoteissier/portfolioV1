@@ -862,6 +862,12 @@ footer .logo {
   height: 150px;
   border-radius: 15px 15px 0 0;
 }
+.project .card .img-card .img-projet {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
 .project .card .logo-card-Javascript {
   position: absolute;
   top: 10px;
