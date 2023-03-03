@@ -5,13 +5,6 @@ import About from "@/components/About.vue";
 import Contact from "@/components/Contact.vue";
 import Projects from "@/components/Projects.vue";
 
-import Css3 from "@/components/projects/Css3.vue";
-import Javascript from "@/components/projects/Javascript.vue";
-import Vuejs from "@/components/projects/Vuejs.vue";
-import React from "@/components/projects/React.vue";
-import Symfony from "@/components/projects/Symfony.vue";
-import Threejs from "@/components/projects/Threejs.vue";
-
 import Formulaire from "@/components/contact/Formulaire.vue";
 
 import Bio from "@/components/about/Bio.vue";
@@ -25,12 +18,6 @@ export {
     About,
     Contact,
     Projects,
-    Javascript,
-    Css3,
-    React,
-    Vuejs,
-    Symfony,
-    Threejs,
     Formulaire,
     Bio,
     Education,

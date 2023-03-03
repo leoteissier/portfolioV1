@@ -21,77 +21,6 @@ body{
 body::-webkit-scrollbar {
   display: none;
 }
-.color-white{
-  color: $white;
-}
-.color-font{
-  color: $font-color;
-}
-.color-secondary{
-  color: $secondary-color;
-}
-.color-tertiary{
-  color: $third-color;
-}
-.color-quaternary{
-  color: $fourth-color;
-}
-.color-quinary{
-  color: $fifth-color;
-}
-p{
-  font-size: 1rem;
-  line-height: 1.2;
-}
-
-small{
-  color: $secondary-color;
-}
-.border-left{
-  border-left: solid $border-color 1px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.border-right{
-  border-right: solid $border-color 1px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.border-bottom{
-  border-bottom: solid $border-color 1px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.border-top{
-  border-top: solid $border-color 1px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.logo{
-  margin: 0 20px;
-  width: 20px;
-  height: auto;
-}
-.petit-logo-arrow{
-  margin-left: 20px;
-  width: 30px;
-  height: auto;
-}
-.petit-logo-cross{
-  margin: 0 20px;
-  width: 20px;
-  height: auto;
-}
-
-a{
-  text-decoration: none;
-  color: $font-color;
-}
 //portfolio-----------------------------------
 #app{
   width: 100%;
@@ -114,13 +43,16 @@ header{
     grid-template-rows: 1fr;
     height: 100%;
     border-bottom: solid $border-color 1px;
-    #liens{
+    .liens{
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
       height: 100%;
       grid-column: 2/5;
+    }
+    .burger{
+      display: none;
     }
     ul{
       display: flex;
@@ -161,28 +93,14 @@ header{
         }
       }
     }
-    #name{
+    .name{
       display: flex;
       align-items: center;
       margin-left: 30px;
       grid-column: 1/2;
     }
   }
-  #nav-left{
-    display: flex;
-    align-items: center;
-    height: 100%;
-  }
-  #nav-right{
-    display: flex;
-    align-items: center;
-    height: 100%;
-    margin-right: 20px;
-    padding-left: 20px;
-    border-left: solid #1E2D3D 1px;
-  }
 }
-
 //footer-----------------------------------
 footer{
   grid-column: 1;
@@ -191,17 +109,18 @@ footer{
   justify-content: space-between;
   height: 100%;
   border-top: solid #1E2D3D 1px;
-  #footer-left{
+  .footer-left{
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 301px;
     height: 100%;
-    #find{
-      margin-left: 30px;
-      margin-right: 30px;
+    .find{
+      margin: 0 20px;
+      width: 200px;
+      height: auto;
     }
   }
-  #footer-right{
+  .footer-right{
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -217,11 +136,11 @@ footer{
   }
 }
 
-
 //main---------------------------------------------------
 .main{
   grid-column: 1;
   grid-row: 2/3;
+  position: relative;
 }
 
 
@@ -230,33 +149,37 @@ footer{
   height: 100%;
   width: 100%;
   display: flex;
-  #home-left{
+  position: relative;
+  .home-left{
     width: 50%;
     height: 100%;
+    padding-left: 4%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
   }
-  #presentaion{
-    #game-explain{
+  .presentation{
+    z-index: 10;
+    .link-git{
       margin-top: 50px;
     }
     h1{
-      font-size: 62px;
+      font-size: 5rem;
       font-weight: normal;
       margin: 5px;
     }
     h2{
-      font-size: 32px;
+      font-size: 2rem;
       font-weight: normal;
       margin: 5px;
     }
     p{
       margin: 5px;
+      font-size: 1rem;
     }
   }
-  #home-right{
+  .home-right{
     width: 50%;
     height: 100%;
     display: flex;
@@ -300,12 +223,16 @@ footer{
 }
 .light-green{
   position: absolute;
+  top : 50%;
+  left : 70%;
   box-shadow: $fourth-color -100px -100px 10000px 100px;
   border-radius: 50%;
   z-index: 0;
 }
 .light-blue{
   position: absolute;
+  top : 50%;
+  left : 70%;
   box-shadow: $secondary-color 100px 100px 10000px 100px;
   border-radius: 50%;
   z-index: 0;
@@ -350,17 +277,17 @@ footer{
   grid-row: 2/3;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: flex-start;
   padding: 10px;
   .logo{
-    margin: 10px;
+    margin: 5px 10px;
   }
   a{
     font-size: 14px;
     cursor: pointer;
   }
-  span{
+  p{
     cursor: pointer;
   }
 }
@@ -515,7 +442,7 @@ footer{
   }
 }
 .project{
-  width: 375px;
+  width: 400px;
   margin: 25px;
   .card{
     position: relative;
@@ -526,7 +453,7 @@ footer{
     border: solid $border-color 1px;
     .img-card{
       width: 100%;
-      height: 150px;
+      height: 200px;
       border-radius: 15px 15px 0 0;
       .img-projet{
         width: 100%;
@@ -564,10 +491,10 @@ footer{
       width: 100%;
       flex-grow: 1;
       border-radius: 0 0 15px 15px;
-      padding: 10px;
+      padding: 20px;
       background-color: $main-color;
       .button{
-        margin-top: 10px;
+        margin-top: 20px;
         @include padding(10px);
         @include border-radius(8px);
         @include background($border-color);
@@ -655,7 +582,7 @@ footer{
       @include width-height(calc(100% - 30px), 100%);
       overflow-x: hidden;
       overflow-y: auto;
-      padding: 25px 50px;
+      padding: 25px 20px;
       &::-webkit-scrollbar {
         display: none;
         width: 10px;
@@ -716,22 +643,44 @@ footer{
 #contact{
   @include grid(300px 230px 1fr 20px, 50px 100px 50px 1fr,0);
   @include width-height(100%, 100%);
+  .coordonnées{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .logo{
+      margin: 0 5px 0 0;
+    }
+  }
 }
 .contact{
   grid-column: 2/5;
   grid-row: 2/5;
   display: flex;
   .formulaire{
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 50%;
     border-left: solid $border-color 1px;
     form{
+      position: absolute;
+      overflow-y: auto;
       width: 70%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &::-webkit-scrollbar {
+        display: none;
+      }
       .error-message{
         color: $error-color;
         font-size: 0.8rem;
+        margin-bottom: 10px;
+      }
+      label{
+        font-size: 1rem;
         margin-bottom: 10px;
       }
     }
@@ -770,6 +719,7 @@ footer{
     }
     button{
       display:inline-block;
+      width: 150px;
       margin-top: 30px;
       padding: 10px;
       border-radius: 8px;
@@ -787,5 +737,290 @@ footer{
   .form-result {
     @include width-height(50%, 1000);
     justify-content: flex-start;
+    padding: 2%;
+    position: relative;
+    .width-form-result{
+      display: flex;
+      align-items: center;
+      width: calc(100% - 4% - 30px);
+      height: 100%;
+      position: absolute;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
   }
 }
+
+
+
+//media queries---------------------------------------------------
+@media screen and (max-width: 1280px) {
+  .button{
+    font-size: 0.9rem !important;
+  }
+  nav {
+    grid-template-columns: 250px 150px 1fr !important;
+  }
+  footer{
+    .footer-left {
+      width: 251px !important;
+      .find{
+        width: 150px !important;
+      }
+    }
+    .footer-right {
+      width: 180px !important;
+    }
+  }
+  #home {
+    grid-template-columns: 250px 230px 1fr !important;
+  }
+  #about {
+    grid-template-columns: 250px 230px 1fr !important;
+    grid-template-rows: 50px 150px 50px 1fr;
+  }
+  #projects {
+      grid-template-columns: 250px 230px 1fr !important;
+  }
+  #contact {
+      grid-template-columns: 250px 230px 1fr !important;
+    a{
+        font-size: 0.7rem !important;
+    }
+    textarea{
+      height: 120px;
+    }
+  }
+  .nom-page1 {
+    padding-left: 5px;
+
+    p {
+      padding: 0;
+    }
+  }
+  .nom-page2 {
+    padding-left: 5px;
+
+    p {
+      padding: 0 10px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  nav {
+    grid-template-columns: 170px 150px 1fr !important;
+
+    a {
+      font-size: 0.9rem !important;
+    }
+  }
+  footer {
+    a {
+      font-size: 0.9rem !important;
+    }
+    .footer-left {
+      width: 251px !important;
+      .find {
+        width: 89px !important;
+        margin: 0 15px !important;
+      }
+    }
+    .logo {
+      margin: 0 15px !important;
+      width: 20px;
+    }
+    p{
+        font-size: 0.7rem !important;
+    }
+  }
+
+  #home {
+    grid-template-columns: 170px 150px 1fr !important;
+    .presentation {
+      .link-git{
+        margin-top: 25px;
+      }
+      h1{
+        font-size: 3rem;
+      }
+      h2{
+        font-size: 1.5rem;
+      }
+      p{
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  #about {
+    grid-template-columns: 170px 170px 1fr !important;
+    grid-template-rows: 50px 115px 50px 1fr;
+    .details {
+      p {
+        padding: 0;
+      }
+    }
+    .code{
+      padding: 25px 10px!important;
+    }
+  }
+  #projects {
+    grid-template-columns: 170px 150px 1fr !important;
+    .details-projects{
+      .position-checkbox{
+        margin: 0 5px;
+      }
+      .checkmark{
+        width: 15px;
+        height: 15px;
+        &:after{
+          top : 1px!important;
+          left: 5px!important;
+        }
+      }
+      .logo-projects{
+        width: 20px;
+        margin: 5px;
+      }
+    }
+  }
+  #contact {
+    grid-template-columns: 170px 150px 1fr !important;
+    a{
+        font-size: 0.5rem !important;
+    }
+    .formulaire{
+      form{
+        label{
+            font-size: 0.8rem !important;
+          margin-bottom: 5px;
+        }
+        input{
+          height: 30px;
+        }
+        textarea{
+          height: 100px;
+        }
+      }
+    }
+    .format{
+      display: flex;
+      input{
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  body{
+    overflow: hidden;
+    padding: 3vh;
+  }
+  #home{
+    display: block;
+    .home-left{
+      width: 100%;
+    }
+    .light-green{
+      top: 50%;
+      left: 50%;
+      box-shadow: #43d9ad -50px -100px 200px 70px;
+    }
+   .light-blue{
+     top: 50%;
+     left: 50%;
+     box-shadow: #4d5bce 50px 100px 200px 70px;
+   }
+  }
+  nav{
+    grid-template-columns: 1fr 60px !important;
+    p{
+      font-size: 0.9rem;
+    }
+    .liens{
+      display: none!important;
+    }
+    .burger{
+      display: flex!important;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 15px;
+      width: 100%;
+    }
+  }
+  .liens-nav-phone{
+    position: absolute;
+    top : 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    background-color: $main-color;
+  }
+  .nav-bar-phone{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    li{
+      list-style: none;
+      width: 100%;
+      padding: 20px 0;
+      display: flex!important;
+      justify-content: flex-start;
+      align-items: center;
+      a{
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 30px;
+      }
+    }
+  }
+  footer{
+    display: none;
+  }
+  .footer-phone{
+    display: flex;
+    align-items: center;
+    .footer-nav-phone{
+      display: flex;
+      height: 100%;
+    }
+    .find{
+      display: flex;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+      margin: 0;
+      p{
+        font-size: 0.9rem;
+        margin: 0 20px;
+      }
+    }
+    .link{
+      width: 50%;
+      height: 100%;
+        display: flex;
+        justify-content: flex-end;
+      a{
+        margin: 0 25px;
+      }
+      img{
+        width: 30px;
+        margin: 0;
+      }
+    }
+  }
+}
+.liens-nav-phone{
+  display: none;
+}
+.footer-phone{
+  display: none;
+}
+

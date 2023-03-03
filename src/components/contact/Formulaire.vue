@@ -3,20 +3,22 @@
     <!--form-->
     <form v-if="!showConfirmationMessage" @submit.prevent>
       <div class="flex-column margin-top-10px">
-        <label class="margin-bottom-10px" for="name">_name :</label>
-        <input type="text" v-model.trim="name" id="name" name="name" placeholder="votre prénom"/>
-      </div>
-      <div class="flex-column margin-top-10px">
-        <label class="margin-bottom-10px" for="email">_email :</label>
+        <label for="email">_email :</label>
         <input type="email" v-model.trim="email" id="email" name="email" placeholder="Votre email">
         <div v-if="emailIsValid" class="error-message">Adresse e-mail invalide</div>
       </div>
-      <div class="flex-column margin-top-10px">
-        <label class="margin-bottom-10px" for="email">_subject :</label>
-        <input type="text" v-model.trim="subject" id="subject" name="subject" placeholder="Votre sujet"/>
+      <div class="format">
+        <div class="flex-column margin-top-10px">
+          <label for="name">_name :</label>
+          <input type="text" v-model.trim="name" id="name" name="name" placeholder="votre prénom"/>
+        </div>
+        <div class="flex-column margin-top-10px">
+          <label for="email">_subject :</label>
+          <input type="text" v-model.trim="subject" id="subject" name="subject" placeholder="Votre sujet"/>
+        </div>
       </div>
       <div class="flex-column margin-top-10px">
-        <label class="margin-bottom-10px" for="message">_message :</label>
+        <label for="message">_message :</label>
         <textarea name="message" v-model.trim="message" id="message" cols="30" rows="10" placeholder="Votre message"></textarea>
       </div>
       <div v-if="showErrorMessage" class="error-message">Please fill in all fields</div>
@@ -34,7 +36,7 @@
     <!--end form submitted-->
   </div>
   <div class="form-result border-left position-rel">
-    <div class="margin-left-50px width-form-result">
+    <div class=" width-form-result">
       <div>
         <div class="flex">
           <p class="margin-right-20px">1</p><p class="color-white"><span class="color-quinary">const</span><span class="color-secondary"> button</span><span class="color-quinary"> =</span><span class="color-secondary"> document.querySelector</span>(<span class="color-tertiary">'#sendBtn'</span>);</p>
@@ -46,10 +48,10 @@
           <p class="margin-right-20px">2</p><p class="color-white"><span class="color-quinary">const</span><span class="color-secondary"> message</span><span class="color-quinary"> =</span> {</p>
         </div>
         <div class="flex">
-          <p class="margin-right-20px">3</p><p class="margin-left-10px color-white"><span class="color-secondary">name</span>: <span class="color-tertiary">"{{ name }}"</span>,</p>
+          <p class="margin-right-20px">4</p><p class="margin-left-10px color-white"><span class="color-secondary">email</span>: <span class="color-tertiary">"{{ email }}"</span>,</p>
         </div>
         <div class="flex">
-          <p class="margin-right-20px">4</p><p class="margin-left-10px color-white"><span class="color-secondary">email</span>: <span class="color-tertiary">"{{ email }}"</span>,</p>
+          <p class="margin-right-20px">3</p><p class="margin-left-10px color-white"><span class="color-secondary">name</span>: <span class="color-tertiary">"{{ name }}"</span>,</p>
         </div>
         <div class="flex">
           <p class="margin-right-20px">5</p><p class="margin-left-10px color-white"><span class="color-secondary">subject</span>: <span class="color-tertiary">"{{ subject }}"</span>,</p>

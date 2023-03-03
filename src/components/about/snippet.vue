@@ -1,7 +1,7 @@
 <template>
   <div class="code">
     <div class="width-100 flex">
-      <p class="color-font">// Code snippet showcase:</p>
+      <p class="color-white">// Code snippet showcase:</p>
     </div>
 
     <div class="carte-code">
@@ -14,10 +14,6 @@
           </div>
         </div>
         <div class="code_note">
-          <div class="flex">
-            <img src="/assets/chat-icon.svg" alt="details">
-            <p>details</p>
-          </div>
           <div class="flex">
             <img @click="toggleStar" :src="starImage" alt="start">
             <p>start</p>
@@ -53,10 +49,6 @@
           </div>
         </div>
         <div class="code_note">
-          <div class="flex">
-            <img src="/assets/chat-icon.svg" alt="details">
-            <p>details</p>
-          </div>
           <div class="flex">
             <img @click="toggleStar" :src="starImage" alt="start">
             <p>start</p>
@@ -109,10 +101,6 @@
           </div>
         </div>
         <div class="code_note">
-          <div class="flex">
-            <img src="/assets/chat-icon.svg" alt="details">
-            <p>details</p>
-          </div>
           <div class="flex">
             <img @click="toggleStar" :src="starImage" alt="start">
             <p>start</p>
@@ -178,10 +166,6 @@
           </div>
         </div>
         <div class="code_note">
-          <div class="flex">
-            <img src="/assets/chat-icon.svg" alt="details">
-            <p>details</p>
-          </div>
           <div class="flex">
             <img @click="toggleStar" :src="starImage" alt="start">
 <!--            <p>{{starCount}}</p>-->

@@ -17,8 +17,8 @@ export default {
       <div class="nom-page3 border-bottom"></div>
 
       <div class="details border-bottom flex">
-        <div class="flex-center"><img class="logo" src="/assets/mail.svg" alt=""><a href="mailto:leo.teissier@numericable.fr">leo.teissier@numericable.fr</a></div>
-        <div class="flex-center"><img class="logo" src="/assets/phone.svg" alt=""><a href="tel:+33782869496">+33782869496</a></div>
+        <div class="coordonnées width-100"><img class="logo" src="/assets/mail.svg" alt=""><a href="mailto:leo.teissier@numericable.fr">leo.teissier@numericable.fr</a></div>
+        <div class="coordonnées width-100"><img class="logo" src="/assets/phone.svg" alt=""><a href="tel:+33782869496">+33782869496</a></div>
       </div>
       <div class="contact">
         <Formulaire></Formulaire>

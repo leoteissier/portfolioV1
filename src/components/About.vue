@@ -43,21 +43,21 @@ export default {
           <img class="petit-logo-arrow" src="/assets/arrow-right-s-line.svg" alt="logo arrow">
           <img class="logo" src="/assets/dossier-rose.png" alt="">
           <div class="text-18px">
-            <span v-bind:class="{ 'color-white': isActive === 'Bio' }" @click="choix='Bio'; isActive = 'Bio'">bio</span>
+            <p v-bind:class="{ 'color-white': isActive === 'Bio' }" @click="choix='Bio'; isActive = 'Bio'">bio</p>
           </div>
         </div>
         <div class="flex-center">
           <img class="petit-logo-arrow" src="/assets/arrow-right-s-line.svg" alt="logo arrow">
           <img class="logo" src="/assets/dossier-vert.png" alt="">
           <div class="text-18px">
-            <span v-bind:class="{ 'color-white': isActive === 'Interests' }" @click="choix='Interests'; isActive = 'Interests'">interests</span>
+            <p v-bind:class="{ 'color-white': isActive === 'Interests' }" @click="choix='Interests'; isActive = 'Interests'">interests</p>
           </div>
         </div>
         <div class="flex-center">
           <img class="petit-logo-arrow" src="/assets/arrow-right-s-line.svg" alt="logo arrow">
           <img class="logo" src="/assets/dossier-bleu.png" alt="">
           <div class="text-18px">
-            <span v-bind:class="{ 'color-white': isActive === 'Education' }" @click="choix='Education'; isActive = 'Education'">education</span>
+            <p v-bind:class="{ 'color-white': isActive === 'Education' }" @click="choix='Education'; isActive = 'Education'">education</p>
           </div>
         </div>
       </div>

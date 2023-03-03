@@ -241,9 +241,6 @@
 .width-100{
   width: 100%;
 }
-.width-form-result{
-  width: calc(100% - 80px);
-}
 .width-80{
   width: 80%;
 }
@@ -310,4 +307,95 @@
 }
 .position-abs{
   position: absolute;
+}
+
+
+
+
+//------------------------------------------------
+.color-white{
+  color: $white;
+}
+.color-font{
+  color: $font-color;
+}
+.color-secondary{
+  color: $secondary-color;
+}
+.color-tertiary{
+  color: $third-color;
+}
+.color-quaternary{
+  color: $fourth-color;
+}
+.color-quinary{
+  color: $fifth-color;
+}
+small{
+  color: $secondary-color;
+}
+.border-left{
+  border-left: solid $border-color 1px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.border-right{
+  border-right: solid $border-color 1px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.border-bottom{
+  border-bottom: solid $border-color 1px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.border-top{
+  border-top: solid $border-color 1px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  margin: 0 20px;
+  width: 20px;
+  height: auto;
+}
+.petit-logo-arrow{
+  margin-left: 20px;
+  width: 30px;
+  height: auto;
+}
+.petit-logo-cross{
+  margin: 0 20px;
+  width: 20px;
+  height: auto;
+}
+p{
+  font-size: 1rem;
+  line-height: 1.2;
+}
+a{
+  text-decoration: none;
+  color: $font-color;
+}
+
+@media screen and (max-width: 1024px) {
+  p{
+    font-size: 0.8rem;
+  }
+  .petit-logo-arrow{
+    margin-left: 0;
+    width: 20px;
+  }
+  .petit-logo-cross{
+    margin: 0 10px;
+  }
+  .logo{
+    margin: 0 10px;
+    width: 15px;
+  }
 }
