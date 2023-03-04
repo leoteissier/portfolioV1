@@ -80,7 +80,7 @@ export default {
 
     </div>
 
-    <div class="border-left" id="list-projects">
+    <div class="border-left-phone" id="list-projects">
 
       <section class="list-projects">
         <div v-for="p in filteredProjets" :key="p.id">

@@ -4,22 +4,22 @@
     <form v-if="!showConfirmationMessage" @submit.prevent>
       <div class="flex-column margin-top-10px">
         <label for="email">_email :</label>
-        <input type="email" v-model.trim="email" id="email" name="email" placeholder="Votre email">
+        <input type="email" v-model.trim="email" id="email" name="email">
         <div v-if="emailIsValid" class="error-message">Adresse e-mail invalide</div>
       </div>
       <div class="format">
         <div class="flex-column margin-top-10px">
           <label for="name">_name :</label>
-          <input type="text" v-model.trim="name" id="name" name="name" placeholder="votre prénom"/>
+          <input type="text" v-model.trim="name" id="name" name="name"/>
         </div>
         <div class="flex-column margin-top-10px">
           <label for="email">_subject :</label>
-          <input type="text" v-model.trim="subject" id="subject" name="subject" placeholder="Votre sujet"/>
+          <input type="text" v-model.trim="subject" id="subject" name="subject"/>
         </div>
       </div>
       <div class="flex-column margin-top-10px">
         <label for="message">_message :</label>
-        <textarea name="message" v-model.trim="message" id="message" cols="30" rows="10" placeholder="Votre message"></textarea>
+        <textarea name="message" v-model.trim="message" id="message" cols="30" rows="10"></textarea>
       </div>
       <div v-if="showErrorMessage" class="error-message">Please fill in all fields</div>
       <button @click="submitForm">_submit_message</button>

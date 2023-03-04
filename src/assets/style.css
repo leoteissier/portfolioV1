@@ -571,7 +571,7 @@ footer .logo {
   flex-direction: column;
 }
 #home .presentation {
-  z-index: 10;
+  z-index: 1;
 }
 #home .presentation .link-git {
   margin-top: 50px;
@@ -640,7 +640,7 @@ footer .logo {
   left: 70%;
   box-shadow: #43D9AD -100px -100px 10000px 100px;
   border-radius: 50%;
-  z-index: 0;
+  z-index: 3;
 }
 
 .light-blue {
@@ -649,7 +649,7 @@ footer .logo {
   left: 70%;
   box-shadow: #4D5BCE 100px 100px 10000px 100px;
   border-radius: 50%;
-  z-index: 0;
+  z-index: 3;
 }
 
 .nom-page1 {
@@ -997,7 +997,6 @@ footer .logo {
 }
 #description .description .personal-info {
   position: absolute;
-  overflow-x: hidden;
   overflow-y: auto;
   width: calc(100% - 30px);
   height: 100%;
@@ -1053,7 +1052,6 @@ footer .logo {
   align-items: center;
   width: calc(100% - 30px);
   height: 100%;
-  overflow-x: hidden;
   overflow-y: auto;
   padding: 25px 20px;
 }
@@ -1142,7 +1140,7 @@ footer .logo {
 .contact .formulaire form {
   position: absolute;
   overflow-y: auto;
-  width: 70%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -1368,7 +1366,6 @@ footer .logo {
 }
 @media screen and (max-width: 767px) {
   body {
-    overflow: hidden;
     padding: 3vh;
   }
   #home {
@@ -1404,12 +1401,9 @@ footer .logo {
     width: 100%;
   }
   .liens-nav-phone {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 20;
+    grid-column: 1;
+    grid-row: 2/3;
+    z-index: 2;
     background-color: #011627;
   }
   .nav-bar-phone {
@@ -1438,8 +1432,10 @@ footer .logo {
     display: none;
   }
   .footer-phone {
-    display: flex;
-    align-items: center;
+    grid-column: 1;
+    grid-row: 3/4;
+    z-index: 2;
+    background-color: #011627;
   }
   .footer-phone .footer-nav-phone {
     display: flex;
@@ -1469,6 +1465,138 @@ footer .logo {
     width: 30px;
     margin: 0;
   }
+  .main {
+    grid-column: 1;
+    grid-row: 2/4;
+  }
+  .nom-page1 p {
+    font-size: 1rem;
+  }
+  .nom-page2 {
+    display: none;
+  }
+  .nom-page3 {
+    display: none;
+  }
+  #about {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 50px 115px 1fr;
+  }
+  #about .details {
+    padding: 0 20px;
+  }
+  #about .details p {
+    font-size: 0.9rem;
+  }
+  #about #description {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  #about #description::-webkit-scrollbar {
+    display: none;
+  }
+  #about #description .description {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #about #description .description .personal-info {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+  #about #description .snippet {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #about #description .snippet .code {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    overflow-y: initial;
+  }
+  #projects {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 50px 180px 1fr;
+  }
+  #projects .details-projects {
+    grid-column: 1;
+    grid-row: 2/3;
+  }
+  #projects .details-projects p {
+    font-size: 1rem;
+  }
+  #projects .details-projects .checkmark {
+    width: 20px;
+    height: 20px;
+  }
+  #projects .details-projects .checkmark:after {
+    top: 3px !important;
+    left: 6px !important;
+  }
+  #projects .details-projects .logo-projects {
+    width: 30px;
+    height: 30px;
+  }
+  #projects #list-projects {
+    grid-column: 1;
+    grid-row: 3/4;
+  }
+  #projects #list-projects .list-projects {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #projects #list-projects .list-projects .project {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+  }
+  #contact {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 50px 100px 1fr;
+  }
+  #contact .details {
+    grid-column: 1;
+    grid-row: 2/3;
+  }
+  #contact .details p {
+    font-size: 1rem;
+  }
+  #contact .details a {
+    font-size: 1rem !important;
+  }
+  #contact .contact {
+    grid-column: 1;
+    grid-row: 3/4;
+  }
+  #contact .formulaire {
+    width: 100%;
+    border-left: solid #1E2D3D 0 !important;
+  }
+  #contact .formulaire input {
+    height: 40px !important;
+  }
+  #contact .formulaire textarea {
+    height: 100px !important;
+  }
+  #contact .formulaire .format {
+    flex-direction: column;
+  }
+  #contact .form-result {
+    display: none;
+  }
+  .scroll {
+    display: none;
+  }
+  .border-left-phone {
+    border-left: solid #1E2D3D 0 !important;
+  }
 }
 .liens-nav-phone {
   display: none;
@@ -1476,6 +1604,13 @@ footer .logo {
 
 .footer-phone {
   display: none;
+}
+
+.border-left-phone {
+  border-left: solid #1E2D3D 1px;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

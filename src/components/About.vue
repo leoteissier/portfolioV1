@@ -61,7 +61,7 @@ export default {
           </div>
         </div>
       </div>
-      <div class="border-left" id="description">
+      <div class="border-left-phone" id="description">
         <div class="description">
           <div class="personal-info">
             <Bio v-if="choix === 'Bio'"></Bio>
@@ -72,7 +72,7 @@ export default {
             <span></span>
           </div>
         </div>
-        <div class="border-left snippet">
+        <div class="border-left-phone snippet">
           <Snippet></Snippet>
           <div class="scroll border-left">
             <span></span>

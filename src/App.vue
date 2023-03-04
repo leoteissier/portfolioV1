@@ -62,23 +62,23 @@ export default {
   </header>
   <section v-if="show" class="main">
     <component :is="selectComponent" />
-    <div class="liens-nav-phone" :class="{ active: showNavBar }">
-      <ul class="nav-bar-phone">
-        <li class="border-bottom" v-bind:class="{ 'active': isActive === 'Home' }">
-          <a v-bind:class="{ 'button-active': isActive === 'Home' }" @click="choix='Home'; isActive = 'Home'">_hello</a>
-        </li>
-        <li class="border-bottom" v-bind:class="{ 'active': isActive === 'About' }">
-          <a v-bind:class="{ 'button-active': isActive === 'About' }" @click="choix='About'; isActive = 'About'">_about-me</a>
-        </li>
-        <li class="border-bottom" v-bind:class="{ 'active': isActive === 'Projects' }">
-          <a v-bind:class="{ 'button-active': isActive === 'Projects' }" @click="choix='Projects'; isActive = 'Projects'">_projects</a>
-        </li>
-        <li class="border-bottom" v-bind:class="{ 'active': isActive === 'Contact' }">
-          <a v-bind:class="{ 'button-active': isActive === 'Contact' }" @click="choix='Contact'; isActive = 'Contact'">_contact-me</a>
-        </li>
-      </ul>
-    </div>
   </section>
+  <div class="liens-nav-phone" :class="{ active: showNavBar }">
+    <ul class="nav-bar-phone">
+      <li class="border-bottom" v-bind:class="{ 'active': isActive === 'Home' }">
+        <a v-bind:class="{ 'button-active': isActive === 'Home' }" @click="choix='Home'; isActive = 'Home'">_hello</a>
+      </li>
+      <li class="border-bottom" v-bind:class="{ 'active': isActive === 'About' }">
+        <a v-bind:class="{ 'button-active': isActive === 'About' }" @click="choix='About'; isActive = 'About'">_about-me</a>
+      </li>
+      <li class="border-bottom" v-bind:class="{ 'active': isActive === 'Projects' }">
+        <a v-bind:class="{ 'button-active': isActive === 'Projects' }" @click="choix='Projects'; isActive = 'Projects'">_projects</a>
+      </li>
+      <li class="border-bottom" v-bind:class="{ 'active': isActive === 'Contact' }">
+        <a v-bind:class="{ 'button-active': isActive === 'Contact' }" @click="choix='Contact'; isActive = 'Contact'">_contact-me</a>
+      </li>
+    </ul>
+  </div>
   <Footer></Footer>
 
   <div class="footer-phone border-top" :class="{ active: showNavBar }">

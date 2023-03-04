@@ -160,7 +160,7 @@ footer{
     flex-direction: column;
   }
   .presentation{
-    z-index: 10;
+    z-index: 1;
     .link-git{
       margin-top: 50px;
     }
@@ -227,7 +227,7 @@ footer{
   left : 70%;
   box-shadow: $fourth-color -100px -100px 10000px 100px;
   border-radius: 50%;
-  z-index: 0;
+  z-index: 3;
 }
 .light-blue{
   position: absolute;
@@ -235,7 +235,7 @@ footer{
   left : 70%;
   box-shadow: $secondary-color 100px 100px 10000px 100px;
   border-radius: 50%;
-  z-index: 0;
+  z-index: 3;
 }
 
 //patern---------------------------------------------------
@@ -537,7 +537,6 @@ footer{
     display: flex;
     .personal-info{
       position: absolute;
-      overflow-x: hidden;
       overflow-y: auto;
       @include width-height(calc(100% - 30px), 100%);
       padding: 25px 50px;
@@ -580,7 +579,6 @@ footer{
       position: absolute;
       @include flex(column, flex-start, center);
       @include width-height(calc(100% - 30px), 100%);
-      overflow-x: hidden;
       overflow-y: auto;
       padding: 25px 20px;
       &::-webkit-scrollbar {
@@ -666,7 +664,7 @@ footer{
     form{
       position: absolute;
       overflow-y: auto;
-      width: 70%;
+      width: 80%;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -894,7 +892,7 @@ footer{
     .formulaire{
       form{
         label{
-            font-size: 0.8rem !important;
+          font-size: 0.8rem !important;
           margin-bottom: 5px;
         }
         input{
@@ -915,7 +913,6 @@ footer{
 }
 @media screen and (max-width: 767px) {
   body{
-    overflow: hidden;
     padding: 3vh;
   }
   #home{
@@ -951,12 +948,9 @@ footer{
     }
   }
   .liens-nav-phone{
-    position: absolute;
-    top : 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 20;
+    grid-column: 1;
+    grid-row: 2/3;
+    z-index: 2;
     background-color: $main-color;
   }
   .nav-bar-phone{
@@ -985,8 +979,10 @@ footer{
     display: none;
   }
   .footer-phone{
-    display: flex;
-    align-items: center;
+    grid-column: 1;
+    grid-row: 3/4;
+    z-index: 2;
+    background-color: $main-color;
     .footer-nav-phone{
       display: flex;
       height: 100%;
@@ -1016,6 +1012,140 @@ footer{
       }
     }
   }
+  .main{
+    grid-column: 1;
+    grid-row: 2/4;
+  }
+  .nom-page1{
+    p{
+      font-size: 1rem;
+    }
+  }
+  .nom-page2{
+    display: none;
+  }
+  .nom-page3{
+    display: none;
+  }
+  #about{
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 50px 115px 1fr;
+    .details{
+      padding: 0 20px;
+      p{
+        font-size: 0.9rem;
+      }
+    }
+    #description{
+      grid-column: 1/2;
+      grid-row: 3/4;
+      flex-direction: column;
+      overflow-x: hidden;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .description{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        .personal-info {
+          position: relative;
+          width: 100%;
+          margin: 0;
+          padding: 10px;
+        }
+      }
+      .snippet{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        .code{
+          width: 100%;
+          margin: 0;
+          padding: 10px;
+          overflow-y: initial;
+        }
+      }
+    }
+  }
+  #projects{
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 50px 180px 1fr;
+    .details-projects{
+      grid-column: 1;
+      grid-row: 2/3;
+      p{
+        font-size: 1rem;
+      }
+      .checkmark{
+        width: 20px;
+        height: 20px;
+        &:after{
+          top: 3px!important;
+          left: 6px!important;
+        }
+      }
+      .logo-projects{
+        width: 30px;
+        height: 30px;
+      }
+    }
+    #list-projects{
+      grid-column: 1;
+      grid-row: 3/4;
+      .list-projects{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        .project{
+          width: 100%;
+          margin: 10px 0;
+          padding: 10px;
+        }
+      }
+    }
+  }
+  #contact{
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 50px 100px 1fr;
+    .details{
+      grid-column: 1;
+      grid-row: 2/3;
+      p{
+        font-size: 1rem;
+      }
+      a{
+        font-size: 1rem!important;
+      }
+    }
+    .contact{
+      grid-column: 1;
+      grid-row: 3/4;
+    }
+    .formulaire{
+      width: 100%;
+      border-left: solid #1E2D3D 0!important;
+      input{
+        height: 40px!important;
+      }
+      textarea{
+          height: 100px!important;
+      }
+      .format{
+        flex-direction: column;
+      }
+    }
+    .form-result{
+      display: none;
+    }
+  }
+  .scroll{
+    display: none;
+  }
+  .border-left-phone{
+    border-left: solid $border-color 0!important;
+  }
 }
 .liens-nav-phone{
   display: none;
@@ -1023,4 +1153,9 @@ footer{
 .footer-phone{
   display: none;
 }
-
+.border-left-phone{
+  border-left: solid $border-color 1px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
