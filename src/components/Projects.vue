@@ -8,6 +8,7 @@ export default {
         'Css',
         'Vuejs',
         'Symfony',
+        'Unity',
       ],
       projets: [
         {
@@ -41,6 +42,14 @@ export default {
           description: 'Here is a site for the sale of cultural places for the city of Saint-Quentin-en-Yvelines, I made this site with a classmate.',
           image: 'sae301.png',
           lien: 'https://mmi21d14.sae301dev.ovh',
+        },
+        {
+            id: 4,
+            titre: 'World of tanks',
+            langages: 'Unity',
+            description: 'Here is a tank game, but also a race against time. Play you will understand.',
+            image: 'worldoftanks.png',
+            lien: 'https://worldoftanks.leoteissier.fr',
         },
       ],
       checkedLangages: [],
