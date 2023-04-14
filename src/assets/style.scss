@@ -119,20 +119,44 @@ footer{
       width: 200px;
       height: auto;
     }
+    .logo-bg-linkedin {
+      width: 30px;
+      height: 30px;
+      margin: 0 20px;
+      background-image: url(/public/assets/linkedin.svg);
+      background-size: cover;
+      transition: opacity 0.3s ease-in-out, background-image 0.3s ease-in-out;
+      &:hover{
+        width: 30px;
+        height: 30px;
+        margin: 0 20px;
+        background-image: url(/public/assets/linkedin-hover.svg);
+        background-size: cover;
+      }
+    }
   }
   .footer-right{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 280px;
+    width: 230px;
     height: 100%;
-    padding-right: 10px;
-    border-left: solid #1E2D3D 1px
-  }
-  .logo{
-    margin: 0 20px;
-    width: 30px;
-    height: auto;
+    padding-right: 20px;
+    border-left: solid #1E2D3D 1px;
+    .logo-bg-github{
+      width: 30px;
+      height: 30px;
+      background-image: url(/public/assets/github.svg) ;
+      background-size: cover;
+      transition: opacity 0.3s ease-in-out, background-image 0.3s ease-in-out;
+      margin-left: 10px;
+      &:hover{
+        width: 30px;
+        height: 30px;
+        background-image: url(/public/assets/github-hover.svg);
+        background-size: cover;
+      }
+    }
   }
 }
 
