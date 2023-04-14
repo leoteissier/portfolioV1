@@ -7,7 +7,7 @@
         <div v-for="(snippet, index) in snippets" :key="index" class="carte-code">
             <div class="flex-center margin-bottom-10px">
                 <div class="code_user">
-                    <img src="/assets/user.png" alt="profil">
+                    <img :src=snippet.profil alt="profil">
                     <div class="flex-column">
                         <p class="color-secondary">@{{ snippet.username }}</p>
                         <p>Created {{ snippet.created }} ago</p>
@@ -34,6 +34,7 @@ export default {
       snippets: [
         {
             username: "username1",
+            profil: "/assets/user.png",
             created: "5 months",
             starEmpty: "/assets/star-line.svg",
             starFull : "/assets/star-fill.svg",
@@ -58,6 +59,7 @@ export default {
         },
         {
             username: "username2",
+            profil: "/assets/user.png",
             created: "2 months",
             starEmpty: "/assets/star-line.svg",
             starFull : "/assets/star-fill.svg",
@@ -99,6 +101,7 @@ export default {
         },
         {
             username: "username3",
+            profil: "/assets/user.png",
             created: "1 month",
             starEmpty: "/assets/star-line.svg",
             starFull : "/assets/star-fill.svg",
@@ -153,6 +156,7 @@ export default {
         },
         {
             username: "username4",
+            profil: "/assets/user.png",
             created: "1 week",
             starEmpty: "/assets/star-line.svg",
             starFull : "/assets/star-fill.svg",
