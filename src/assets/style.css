@@ -1583,7 +1583,7 @@ footer .footer-right .logo-bg-github:hover {
   }
   #projects {
     grid-template-columns: 1fr !important;
-    grid-template-rows: 50px 180px 1fr;
+    grid-template-rows: 50px 220px 1fr;
   }
   #projects .details-projects {
     grid-column: 1;
