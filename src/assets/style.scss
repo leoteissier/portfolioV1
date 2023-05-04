@@ -550,6 +550,10 @@ footer{
       @include logo-card;
       background-color: $vuejs-color;
     }
+    .logo-card-Nuxt{
+      @include logo-card;
+      background-color: $nuxt-color;
+    }
     .logo-card-Symfony{
       @include logo-card;
       background-color: $symfony-color;

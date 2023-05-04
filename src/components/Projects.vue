@@ -83,7 +83,7 @@ export default {
             <span class="checkmark"></span>
           </label>
         </div>
-        <img class="logo-projects" :src="`/assets/${l}.svg`" :alt="`${l} logo`">
+        <img class="logo-projects" :src="`/logo/${l}.svg`" :alt="`${l} logo`">
         <p>{{ l }}</p>
       </div>
 
@@ -97,8 +97,8 @@ export default {
             <p class="margin-bottom-10px"><span class="color-secondary">Project {{ p.langages }}</span> // _{{ p.titre }}</p>
             <div class="card">
               <div class="img-card">
-                <img class="img-projet" :src="`/assets/${p.image}`">
-                <img :class="`logo-card-${p.langages}`" :src="`/assets/${p.langages}-black.svg`" :alt="`${p.titre} logo`" />
+                <img class="img-projet" :src="`/projects_img/${p.image}`">
+                <img :class="`logo-card-${p.langages}`" :src="`/logo/${p.langages}-black.svg`" :alt="`${p.titre} logo`" />
               </div>
               <div class="description-card border-top">
                 <p>{{ p.description }}</p>
