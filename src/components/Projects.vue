@@ -52,6 +52,14 @@ export default {
             image: 'worldoftanks.png',
             lien: 'https://worldoftanks.leoteissier.fr',
         },
+        {
+          id: 5,
+          titre: 'Snake',
+          langages: 'Vuejs',
+          description: 'Here you will find a classic snake game, could you finish this game?',
+          image: 'snake.png',
+          lien: 'https://snake.leoteissier.fr',
+        },
       ],
       checkedLangages: [],
     }

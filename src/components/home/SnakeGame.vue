@@ -513,30 +513,30 @@ const initGame = () => {
 
 @keyframes lightAnimateGreen {
   0% {
-    box-shadow: $fourth-color 0 0 10000px 100px;
+    box-shadow: #43d9ad 0 0 10000px 100px;
   }
   25% {
-    box-shadow: $fourth-color 100px 100px 10000px 100px;
+    box-shadow: #43d9ad 100px 100px 10000px 100px;
   }
   50% {
-    box-shadow: $fourth-color -100px 100px 10000px 100px;
+    box-shadow: #43d9ad -100px 100px 10000px 100px;
   }
   100% {
-    box-shadow: $fourth-color 0 0 10000px 100px;
+    box-shadow: #43d9ad 0 0 10000px 100px;
   }
 }
 @keyframes lightAnimateBlue {
   0% {
-    box-shadow: $secondary-color 0 0 10000px 100px;
+    box-shadow: #4d5bce 0 0 10000px 100px;
   }
   25% {
-    box-shadow: $secondary-color -100px -100px 10000px 100px;
+    box-shadow: #4d5bce -100px -100px 10000px 100px;
   }
   50% {
-    box-shadow: $secondary-color 100px -100px 10000px 100px;
+    box-shadow: #4d5bce 100px -100px 10000px 100px;
   }
   100% {
-    box-shadow: $secondary-color 0 0 10000px 100px;
+    box-shadow: #4d5bce 0 0 10000px 100px;
   }
 }
 </style>
