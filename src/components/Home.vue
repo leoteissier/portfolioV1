@@ -1,5 +1,12 @@
 <script>
+import SnakeGame from "@/components/home/SnakeGame.vue";
 
+export default {
+  name: "Home",
+  components: {
+    SnakeGame
+  },
+}
 </script>
 
 <template>
@@ -16,8 +23,9 @@
           </div>
         </div>
       </div>
-      <div class="light-green"></div>
-      <div class="light-blue"></div>
+      <div class="home-right">
+        <SnakeGame />
+      </div>
     </div>
 </template>
 

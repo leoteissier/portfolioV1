@@ -658,58 +658,13 @@ footer .footer-right .logo-bg-github:hover {
   font-size: 14px;
 }
 
-.light-green {
-  position: absolute;
-  top: 50%;
-  left: 70%;
-  border-radius: 50%;
-  z-index: 3;
-  animation: lightAnimateGreen 7s linear infinite;
-}
-
-.light-blue {
-  position: absolute;
-  top: 50%;
-  left: 70%;
-  border-radius: 50%;
-  z-index: 3;
-  animation: lightAnimateBlue 7s linear infinite;
-}
-
-@keyframes lightAnimateGreen {
-  0% {
-    box-shadow: #43D9AD 0 0 10000px 100px;
-  }
-  25% {
-    box-shadow: #43D9AD 100px 100px 10000px 100px;
-  }
-  50% {
-    box-shadow: #43D9AD -100px 100px 10000px 100px;
-  }
-  100% {
-    box-shadow: #43D9AD 0 0 10000px 100px;
-  }
-}
-@keyframes lightAnimateBlue {
-  0% {
-    box-shadow: #4D5BCE 0 0 10000px 100px;
-  }
-  25% {
-    box-shadow: #4D5BCE -100px -100px 10000px 100px;
-  }
-  50% {
-    box-shadow: #4D5BCE 100px -100px 10000px 100px;
-  }
-  100% {
-    box-shadow: #4D5BCE 0 0 10000px 100px;
-  }
-}
 .nom-page1 {
   grid-column: 1/2;
   grid-row: 1/2;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  cursor: pointer;
 }
 .nom-page1 p {
   color: #E5E9F0;
@@ -1315,6 +1270,9 @@ footer .footer-right .logo-bg-github:hover {
   #home {
     grid-template-columns: 250px 230px 1fr !important;
   }
+  #home .home-right {
+    display: none;
+  }
   #about {
     grid-template-columns: 250px 230px 1fr !important;
     grid-template-rows: 50px 150px 50px 1fr;
@@ -1444,16 +1402,6 @@ footer .footer-right .logo-bg-github:hover {
   #home .home-left {
     width: 100%;
   }
-  #home .light-green {
-    top: 50%;
-    left: 50%;
-    box-shadow: #43d9ad -50px -100px 200px 70px;
-  }
-  #home .light-blue {
-    top: 50%;
-    left: 50%;
-    box-shadow: #4d5bce 50px 100px 200px 70px;
-  }
   nav {
     grid-template-columns: 1fr 60px !important;
   }
@@ -1558,6 +1506,9 @@ footer .footer-right .logo-bg-github:hover {
   #about .details p {
     font-size: 0.9rem;
   }
+  #about .new-grid-row {
+    grid-row: 2/4 !important;
+  }
   #about #description {
     grid-column: 1/2;
     grid-row: 3/4;
@@ -1593,6 +1544,9 @@ footer .footer-right .logo-bg-github:hover {
   #projects {
     grid-template-columns: 1fr !important;
     grid-template-rows: 50px 220px 1fr;
+  }
+  #projects .new-grid-row {
+    grid-row: 2/4 !important;
   }
   #projects .details-projects {
     grid-column: 1;
@@ -1631,6 +1585,9 @@ footer .footer-right .logo-bg-github:hover {
     grid-template-columns: 1fr !important;
     grid-template-rows: 50px 100px 1fr;
   }
+  #contact .new-grid-row {
+    grid-row: 2/4 !important;
+  }
   #contact .details {
     grid-column: 1;
     grid-row: 2/3;
@@ -1642,7 +1599,7 @@ footer .footer-right .logo-bg-github:hover {
     font-size: 1rem !important;
   }
   #contact .contact {
-    grid-column: 1;
+    grid-column: 1/2;
     grid-row: 3/4;
   }
   #contact .formulaire {

@@ -245,70 +245,6 @@ footer{
     font-size: 14px;
   }
 }
-.light-green {
-  position: absolute;
-  top: 50%;
-  left: 70%;
-  border-radius: 50%;
-  z-index: 3;
-  animation: lightAnimateGreen 7s linear infinite;
-}
-
-.light-blue {
-  position: absolute;
-  top: 50%;
-  left: 70%;
-  border-radius: 50%;
-  z-index: 3;
-  animation: lightAnimateBlue 7s linear infinite;
-}
-
-//@keyframes lightAnimateGreen {
-//  0% {
-//    transform: rotate(0deg) translateX(100px) rotate(0deg);
-//  }
-//  100% {
-//    transform: rotate(360deg) translateX(100px) rotate(360deg);
-//  }
-//}
-//
-//@keyframes lightAnimateBlue {
-//  0% {
-//    transform: rotate(0deg) translateX(-100px) rotate(0deg);
-//  }
-//  100% {
-//    transform: rotate(360deg) translateX(-100px) rotate(360deg);
-//  }
-//}
-
-@keyframes lightAnimateGreen {
-    0% {
-        box-shadow: $fourth-color 0 0 10000px 100px;
-    }
-    25% {
-        box-shadow: $fourth-color 100px 100px 10000px 100px;
-    }
-    50% {
-        box-shadow: $fourth-color -100px 100px 10000px 100px;
-    }
-    100% {
-      box-shadow: $fourth-color 0 0 10000px 100px;
-    }
-}
-@keyframes lightAnimateBlue {
-    0% {
-        box-shadow: $secondary-color 0 0 10000px 100px;
-    }
-    25% {
-        box-shadow: $secondary-color -100px -100px 10000px 100px;
-    }
-    50% {
-        box-shadow: $secondary-color 100px -100px 10000px 100px;
-    }
-    100% {
-        box-shadow: $secondary-color 0 0 10000px 100px;
-    }
-}
 
 //patern---------------------------------------------------
 .nom-page1{
@@ -317,6 +253,7 @@ footer{
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  cursor: pointer;
   p{
     color: $white;
     padding : 0 10px;
@@ -854,18 +791,21 @@ footer{
   }
   #home {
     grid-template-columns: 250px 230px 1fr !important;
+    .home-right{
+      display: none;
+    }
   }
   #about {
     grid-template-columns: 250px 230px 1fr !important;
     grid-template-rows: 50px 150px 50px 1fr;
   }
   #projects {
-      grid-template-columns: 250px 230px 1fr !important;
+    grid-template-columns: 250px 230px 1fr !important;
   }
   #contact {
-      grid-template-columns: 250px 230px 1fr !important;
+    grid-template-columns: 250px 230px 1fr !important;
     a{
-        font-size: 0.7rem !important;
+      font-size: 0.7rem !important;
     }
     textarea{
       height: 120px;
@@ -910,7 +850,7 @@ footer{
       width: 20px;
     }
     p{
-        font-size: 0.7rem !important;
+      font-size: 0.7rem !important;
     }
   }
 
@@ -967,7 +907,7 @@ footer{
   #contact {
     grid-template-columns: 170px 150px 1fr !important;
     a{
-        font-size: 0.5rem !important;
+      font-size: 0.5rem !important;
     }
     .formulaire{
       form{
@@ -1000,16 +940,7 @@ footer{
     .home-left{
       width: 100%;
     }
-    .light-green{
-      top: 50%;
-      left: 50%;
-      box-shadow: #43d9ad -50px -100px 200px 70px;
-    }
-   .light-blue{
-     top: 50%;
-     left: 50%;
-     box-shadow: #4d5bce 50px 100px 200px 70px;
-   }
+
   }
   nav{
     grid-template-columns: 1fr 60px !important;
@@ -1081,8 +1012,8 @@ footer{
     .link{
       width: 50%;
       height: 100%;
-        display: flex;
-        justify-content: flex-end;
+      display: flex;
+      justify-content: flex-end;
       a{
         margin: 0 25px;
       }
@@ -1115,6 +1046,9 @@ footer{
       p{
         font-size: 0.9rem;
       }
+    }
+    .new-grid-row {
+      grid-row: 2 / 4!important;
     }
     #description{
       grid-column: 1/2;
@@ -1152,6 +1086,9 @@ footer{
   #projects{
     grid-template-columns: 1fr !important;
     grid-template-rows: 50px 220px 1fr;
+    .new-grid-row {
+      grid-row: 2 / 4!important;
+    }
     .details-projects{
       grid-column: 1;
       grid-row: 2/3;
@@ -1189,6 +1126,9 @@ footer{
   #contact{
     grid-template-columns: 1fr !important;
     grid-template-rows: 50px 100px 1fr;
+    .new-grid-row {
+      grid-row: 2 / 4!important;
+    }
     .details{
       grid-column: 1;
       grid-row: 2/3;
@@ -1200,7 +1140,7 @@ footer{
       }
     }
     .contact{
-      grid-column: 1;
+      grid-column: 1/2;
       grid-row: 3/4;
     }
     .formulaire{
@@ -1210,7 +1150,7 @@ footer{
         height: 40px!important;
       }
       textarea{
-          height: 100px!important;
+        height: 100px!important;
       }
       .format{
         flex-direction: column;

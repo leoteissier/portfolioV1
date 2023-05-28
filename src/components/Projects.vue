@@ -3,6 +3,7 @@ export default {
   name: 'Projects',
   data() {
     return {
+      showMenu: true,
       langages: [
         'Javascript',
         'Css',
@@ -71,11 +72,15 @@ export default {
 
 <template>
   <div id="projects">
-    <div class="nom-page1 border-bottom"><img class="petit-logo-arrow" src="/assets/arrow-drop-down.svg" alt=""><p>projects</p></div>
-    <div class="nom-page2 border-left border-bottom border-right"><p>projects</p><img class="petit-logo-cross" src="/assets/close.svg" alt=""></div>
+    <div class="nom-page1 border-bottom" @click="showMenu = !showMenu">
+      <img class="petit-logo-arrow" src="/assets/arrow-drop-down.svg" alt="">
+      <p>projects</p>
+    </div>
+    <div class="nom-page2 border-left border-bottom border-right"><p>projects</p>
+      <img class="petit-logo-cross" src="/assets/close.svg" alt="">
+    </div>
     <div class="nom-page3 border-bottom"></div>
-    <div class="details-projects flex">
-
+    <div class="details-projects flex" v-show="showMenu">
       <div class="flex-center" v-for="l in langages" :key="l">
         <div class="position-checkbox">
           <label class="checkbox">
@@ -86,12 +91,9 @@ export default {
         <img class="logo-projects" :src="`/logo/${l}.svg`" :alt="`${l} logo`">
         <p>{{ l }}</p>
       </div>
-
     </div>
-
-    <div class="border-left-phone" id="list-projects">
-
-      <section class="list-projects">
+    <div class="border-left-phone" id="list-projects" :class="{'new-grid-row': !showMenu}">
+    <section class="list-projects">
         <div v-for="p in filteredProjets" :key="p.id">
           <div class="project">
             <p class="margin-bottom-10px"><span class="color-secondary">Project {{ p.langages }}</span> // _{{ p.titre }}</p>
@@ -111,10 +113,10 @@ export default {
       <div class="scroll border-left">
         <span></span>
       </div>
-
     </div>
   </div>
 </template>
 
 <style scoped>
+
 </style>

@@ -5,6 +5,8 @@ import About from "@/components/About.vue";
 import Contact from "@/components/Contact.vue";
 import Projects from "@/components/Projects.vue";
 
+import SnakeGame from "@/components/home/SnakeGame.vue"
+
 import Formulaire from "@/components/contact/Formulaire.vue";
 
 import Bio from "@/components/about/Bio.vue";
@@ -18,6 +20,7 @@ export {
     About,
     Contact,
     Projects,
+    SnakeGame,
     Formulaire,
     Bio,
     Education,

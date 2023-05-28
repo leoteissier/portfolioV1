@@ -1,5 +1,5 @@
 <script>
-import { Footer, Home, About, Projects, Contact } from '@/components/index.js'
+import { Footer, Home, About, Projects, Contact, SnakeGame } from '@/components/index.js'
 export default {
   name: 'App',
   components: {
@@ -8,6 +8,7 @@ export default {
     About,
     Projects,
     Contact,
+    SnakeGame,
   },
   data() {
     return {
