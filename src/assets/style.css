@@ -889,15 +889,6 @@ footer .footer-right .logo-bg-github:hover {
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
-.project .card .logo-card-Javascript {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 40px;
-  height: auto;
-  padding: 5px;
-  background-color: #F7DF1E;
-}
 .project .card .logo-card-Css {
   position: absolute;
   top: 10px;
@@ -907,14 +898,32 @@ footer .footer-right .logo-bg-github:hover {
   padding: 5px;
   background-color: #1572B6;
 }
-.project .card .logo-card-React {
+.project .card .logo-card-Scss {
   position: absolute;
   top: 10px;
   right: 10px;
   width: 40px;
   height: auto;
   padding: 5px;
-  background-color: #61DAFB;
+  background-color: #CC6699;
+}
+.project .card .logo-card-Javascript {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  padding: 5px;
+  background-color: #F7DF1E;
+}
+.project .card .logo-card-typescript {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  padding: 5px;
+  background-color: #3178C6;
 }
 .project .card .logo-card-Vuejs {
   position: absolute;
@@ -925,7 +934,25 @@ footer .footer-right .logo-bg-github:hover {
   padding: 5px;
   background-color: #4FC08D;
 }
-.project .card .logo-card-Nuxt {
+.project .card .logo-card-Nodejs {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  padding: 5px;
+  background-color: #339933;
+}
+.project .card .logo-card-express {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  padding: 5px;
+  background-color: #000000;
+}
+.project .card .logo-card-Nuxtjs {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -933,6 +960,42 @@ footer .footer-right .logo-bg-github:hover {
   height: auto;
   padding: 5px;
   background-color: #00C58E;
+}
+.project .card .logo-card-Nestjs {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  padding: 5px;
+  background-color: #E0234E;
+}
+.project .card .logo-card-React {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  padding: 5px;
+  background-color: #61DAFB;
+}
+.project .card .logo-card-Nextjs {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  padding: 5px;
+  background-color: #000000;
+}
+.project .card .logo-card-Php {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  padding: 5px;
+  background-color: #777BB4;
 }
 .project .card .logo-card-Symfony {
   position: absolute;
@@ -942,6 +1005,15 @@ footer .footer-right .logo-bg-github:hover {
   height: auto;
   padding: 5px;
   background-color: #919191;
+}
+.project .card .logo-card-Laravel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  padding: 5px;
+  background-color: #FF2D20;
 }
 .project .card .logo-card-Threejs {
   position: absolute;
@@ -960,6 +1032,24 @@ footer .footer-right .logo-bg-github:hover {
   height: auto;
   padding: 5px;
   background-color: #ffffff;
+}
+.project .card .logo-card-Mysql {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  padding: 5px;
+  background-color: #4479A1;
+}
+.project .card .logo-card-Python {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  padding: 5px;
+  background-color: #3776AB;
 }
 .project .card .description-card {
   display: flex;

@@ -471,29 +471,61 @@ footer{
         border-radius: 15px 15px 0 0;
       }
     }
-    .logo-card-Javascript{
-      @include logo-card;
-      background-color:  $javascript-color;
-    }
     .logo-card-Css{
       @include logo-card;
       background-color: $css-color;
     }
-    .logo-card-React{
+    .logo-card-Scss{
       @include logo-card;
-      background-color: $react-color;
+      background-color: $scss-color;
+    }
+    .logo-card-Javascript{
+      @include logo-card;
+      background-color:  $javascript-color;
+    }
+    .logo-card-typescript{
+      @include logo-card;
+      background-color: $typescript-color;
     }
     .logo-card-Vuejs{
       @include logo-card;
       background-color: $vuejs-color;
     }
-    .logo-card-Nuxt{
+    .logo-card-Nodejs{
       @include logo-card;
-      background-color: $nuxt-color;
+      background-color: $nodejs-color;
+    }
+    .logo-card-express{
+      @include logo-card;
+      background-color: $expressjs-color;
+    }
+    .logo-card-Nuxtjs{
+      @include logo-card;
+      background-color: $nuxtjs-color;
+    }
+    .logo-card-Nestjs{
+      @include logo-card;
+      background-color: $nestjs-color;
+    }
+    .logo-card-React{
+      @include logo-card;
+      background-color: $react-color;
+    }
+    .logo-card-Nextjs{
+      @include logo-card;
+      background-color: $nextjs-color;
+    }
+    .logo-card-Php{
+      @include logo-card;
+      background-color: $php-color;
     }
     .logo-card-Symfony{
       @include logo-card;
       background-color: $symfony-color;
+    }
+    .logo-card-Laravel{
+      @include logo-card;
+      background-color: $laravel-color;
     }
     .logo-card-Threejs{
       @include logo-card;
@@ -502,6 +534,14 @@ footer{
     .logo-card-Unity{
       @include logo-card;
       background-color: $unity-color;
+    }
+    .logo-card-Mysql{
+      @include logo-card;
+      background-color: $mysql-color;
+    }
+    .logo-card-Python{
+      @include logo-card;
+      background-color: $python-color;
     }
     .description-card{
       @include flex(column, space-between, flex-start);

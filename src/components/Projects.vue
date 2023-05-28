@@ -5,11 +5,27 @@ export default {
     return {
       showMenu: true,
       langages: [
-        'Javascript',
         'Css',
+        // 'Scss',
+        // 'Mysql',
+        'Javascript',
+        // 'Typescript',
         'Vuejs',
+        // 'Nodejs',
+        // 'Expressjs',
+        // 'Nuxtjs',
+        // 'Nestjs',
+        // 'React',
+        // 'Nextjs',
+        // 'Php',
         'Symfony',
+        // 'Laravel',
+        // 'Threejs',
         'Unity',
+        // 'Csharp',
+        // 'C',
+        // 'java',
+        // 'Python',
       ],
       projets: [
         {
