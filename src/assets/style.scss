@@ -61,7 +61,7 @@ header{
       height: 100%;
       margin: 0;
       padding: 0;
-      a{
+      div{
         padding: 0 30px;
         cursor: pointer;
         transition: all 0.3s ease;
@@ -119,21 +119,6 @@ footer{
       width: 200px;
       height: auto;
     }
-    .logo-bg-linkedin {
-      width: 30px;
-      height: 30px;
-      margin: 0 20px;
-      background-image: url(/public/assets/linkedin.svg);
-      background-size: cover;
-      transition: opacity 0.3s ease-in-out, background-image 0.3s ease-in-out;
-      &:hover{
-        width: 30px;
-        height: 30px;
-        margin: 0 20px;
-        background-image: url(/public/assets/linkedin-hover.svg);
-        background-size: cover;
-      }
-    }
   }
   .footer-right{
     display: flex;
@@ -143,20 +128,13 @@ footer{
     height: 100%;
     padding-right: 20px;
     border-left: solid #1E2D3D 1px;
-    .logo-bg-github{
-      width: 30px;
-      height: 30px;
-      background-image: url(/public/assets/github.svg) ;
-      background-size: cover;
-      transition: opacity 0.3s ease-in-out, background-image 0.3s ease-in-out;
-      margin-left: 10px;
-      &:hover{
-        width: 30px;
-        height: 30px;
-        background-image: url(/public/assets/github-hover.svg);
-        background-size: cover;
-      }
-    }
+  }
+  .logo{
+    fill: #607B96;
+    transition: all 0.3s ease;
+  }
+  .logo:hover{
+    fill: #4D5BCE;
   }
 }
 
@@ -1017,7 +995,8 @@ footer{
       display: flex!important;
       justify-content: flex-start;
       align-items: center;
-      a{
+      div
+      {
         color: white;
         font-size: 1.2rem;
         text-align: center;

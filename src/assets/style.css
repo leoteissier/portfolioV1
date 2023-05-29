@@ -369,8 +369,7 @@ small {
 }
 
 .logo {
-  margin: 0 20px;
-  width: 20px;
+  width: 30px;
   height: auto;
 }
 
@@ -477,12 +476,12 @@ header nav ul {
   margin: 0;
   padding: 0;
 }
-header nav ul a {
+header nav ul div {
   padding: 0 30px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
-header nav ul a:hover {
+header nav ul div:hover {
   color: #4D5BCE;
   transition: all 0.3s ease;
 }
@@ -534,21 +533,6 @@ footer .footer-left .find {
   width: 200px;
   height: auto;
 }
-footer .footer-left .logo-bg-linkedin {
-  width: 30px;
-  height: 30px;
-  margin: 0 20px;
-  background-image: url(/public/assets/linkedin.svg);
-  background-size: cover;
-  transition: opacity 0.3s ease-in-out, background-image 0.3s ease-in-out;
-}
-footer .footer-left .logo-bg-linkedin:hover {
-  width: 30px;
-  height: 30px;
-  margin: 0 20px;
-  background-image: url(/public/assets/linkedin-hover.svg);
-  background-size: cover;
-}
 footer .footer-right {
   display: flex;
   justify-content: flex-end;
@@ -558,19 +542,12 @@ footer .footer-right {
   padding-right: 20px;
   border-left: solid #1E2D3D 1px;
 }
-footer .footer-right .logo-bg-github {
-  width: 30px;
-  height: 30px;
-  background-image: url(/public/assets/github.svg);
-  background-size: cover;
-  transition: opacity 0.3s ease-in-out, background-image 0.3s ease-in-out;
-  margin-left: 10px;
+footer .logo {
+  fill: #607B96;
+  transition: all 0.3s ease;
 }
-footer .footer-right .logo-bg-github:hover {
-  width: 30px;
-  height: 30px;
-  background-image: url(/public/assets/github-hover.svg);
-  background-size: cover;
+footer .logo:hover {
+  fill: #4D5BCE;
 }
 
 .main {
@@ -1529,7 +1506,7 @@ footer .footer-right .logo-bg-github:hover {
     justify-content: flex-start;
     align-items: center;
   }
-  .nav-bar-phone li a {
+  .nav-bar-phone li div {
     color: white;
     font-size: 1.2rem;
     text-align: center;
